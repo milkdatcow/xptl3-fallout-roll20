@@ -53,3 +53,49 @@ label.inline {
 .character-info{
     margin-bottom:10px;
 }
+
+.perk-box{
+    margin:0px;
+    margin-bottom: 5px;
+}
+
+.perk-box input{
+    margin-bottom: 5px;
+}
+
+.perk-box textarea{
+    height:50px;
+}
+
+
+/* Weapon Cards */
+.weapon-card{
+    padding: 5px;
+    margin-bottom: 5px;
+    border: solid 1px;
+}
+.weapon-card input{
+
+}
+input.weapon{
+    width: 40%;
+}
+span.weapon-stats{
+    display: flex;
+}
+
+.weapon-stats input{
+    width: 22%;
+}
+
+.weapon-stats input.range{
+    width: 33%;
+}
+
+span.ammo{
+    display:flex;
+}
+
+span.decay-card{
+    display: flex;
+}

@@ -28,11 +28,46 @@
     </div>
 
     <div class="section weapons">
-        Weapons
-    </div>
+        <h2>Weapons</h2>
 
+        <fieldset class="repeating_weapons">
+            <div class="weapon-card">
+                
+                <input class="weapon" spellcheck="false" type="text" name="attr_weaponname" placeholder="Weapon">
+                <button type="roll" name="roll_weapon"></button>
+                <span class="weapon-stats">
+                    <input type="text" class="ap" placeholder="AP">
+                    <input type="text" class="attack" placeholder="Attack">
+                    <input type="text" class="damage" placeholder="Damage">
+                    <input type="text" class="range" placeholder="Range">
+                </span>
+                <input type="text" class="crit" placeholder="Crit">
+                <input type="text" class="special" placeholder="Special Properties">
+                
+                <span class="ammo">
+                    <label>Ammo:</label>
+                    <input type="number" value="1" name="attr_ammo"></input>
+                    <p class="slash">/</p>
+                    <input type="number"value="1" name="attr_max_ammo"></input>
+                    <button type="action"  name="act_reload">Reload</button>
+                </span>
+                <input type="text" class="mods" placeholder="Mods">
+                <span class="decay-card">
+                    <label>Levels of decay:</label>
+                    <input type="number" class="decay" placeholder="Levels of Decay">
+                </span>
+            </div>
+        </fieldset>
+    </div>
+    
     <div class="section perks">
-        Perks
+        <h2>Traits & Perks</h2>
+        <fieldset class="repeating_perks">
+            <div class="perk-box">
+                <input type="text" name="attr_name"/>
+                <textarea name="attr_description"></textarea>
+            </div>
+        </fieldset>
     </div>
 
     <div class="section inventory">
