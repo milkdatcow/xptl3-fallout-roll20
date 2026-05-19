@@ -1,0 +1,32 @@
+h1 {
+    text-align:center
+}
+
+label.inline {
+    display: inline;
+}
+
+.section{
+    border: 3px solid black;
+}
+
+/* Character sheet sections */
+.info{
+    background-color: salmon;
+}
+
+.special{
+    background-color:darkkhaki;
+}
+
+.weapons{
+    background-color: lightgreen;
+}
+
+.perks{
+    background-color: lightskyblue;
+}
+
+.inventory{
+    background-color: thistle;
+}
