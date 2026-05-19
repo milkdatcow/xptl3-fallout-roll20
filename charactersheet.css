@@ -6,27 +6,50 @@ label.inline {
     display: inline;
 }
 
-.section{
-    border: 3px solid black;
+.character-sheet{
+    display:grid;
+    grid-gap: 4px;
+    height:800px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "info special special weapons"
+                         "perks perks inventory inventory";
+    
 }
 
 /* Character sheet sections */
+
+.section{
+    border: 3px solid black;
+    padding:10px;
+}
+
 .info{
-    background-color: salmon;
+    
+    grid-area: info;
 }
 
 .special{
-    background-color:darkkhaki;
+    
+    grid-area: special;
 }
 
 .weapons{
-    background-color: lightgreen;
+    
+    grid-area: weapons;
 }
 
 .perks{
-    background-color: lightskyblue;
+    
+    grid-area: perks;
 }
 
 .inventory{
-    background-color: thistle;
+
+    grid-area: inventory;
+}
+
+
+.character-info{
+    margin-bottom:10px;
 }
