@@ -249,15 +249,22 @@
             <div class="weapon-card">
                 
                 <input class="weapon" spellcheck="false" type="text" name="attr_weaponname" placeholder="Weapon">
-                <button type="roll" name="roll_weapon"></button>
+                <button type="roll" name="roll_barter" value="&{template:weapon} {{weaponName=@{weaponname}}}  {{roll=[[1d20 + @{skill_guns} - @{strain}]]}} {{damage=[[@{weapon_damage} + @{agility_mod}]]}} {{type=@{weapon_damage_type}}}">Roll</button>
                 <span class="weapon-stats">
-                    <input type="text" class="ap" placeholder="AP">
-                    <input type="text" class="attack" placeholder="Attack">
-                    <input type="text" class="damage" placeholder="Damage">
-                    <input type="text" class="range" placeholder="Range">
+                    AP
+                    <input type="text" class="ap" placeholder="AP" name="attr_weapon_ap">
+                    Attack bonus
+                    <input type="text" class="attack" placeholder="Attack" name="attr_weapon_attack">
                 </span>
-                <input type="text" class="crit" placeholder="Crit">
-                <input type="text" class="special" placeholder="Special Properties">
+                <span class="weapon-stats">
+                    Damage
+                    <input type="text" class="damage" placeholder="Damage" name="attr_weapon_damage">
+                    <input type="text" class="damage-type" placeholder="Type" name="attr_weapon_damage_type">
+                    Range
+                    <input type="text" class="range" placeholder="Range" name="attr_weapon_range">
+                </span>
+                <input type="text" class="crit" placeholder="Crit" name="attr_weapon_crit">
+                <input type="text" class="special" placeholder="Special Properties" name="attr_weapon_special">
                 
                 <span class="ammo">
                     <label>Ammo:</label>
@@ -312,20 +319,45 @@
 <!-- roll templates -->
 <rolltemplate class="sheet-rolltemplate-skills">
     <!-- todo -->
-     
-        
       {{#skillName}}
         <div class="sheet-skillName">
           {{skillName}}
         </div>
       {{/skillName}}
       
-      
       {{#roll}}
         <div class="sheet-roll">
           {{roll}}
         </div>
       {{/roll}}
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-weapon">
+
+    {{#weaponName}}
+    <div class="sheet-weaponName">
+        {{weaponName}}
+    </div>
+    {{/weaponName}}
+
+    {{#roll}}
+    <div class="sheet-roll">
+        <span>To Hit: {{roll}}</span>
+    </div>
+    {{/roll}}
+
+    {{#damage}}
+    <div class="sheet-damage">
+        <span>Damage: {{damage}}</span>
+    </div>
+    {{/damage}}
+
+    {{#type}}
+    <div class="sheet-damage-type">
+        {{type}}
+    </div>
+    {{/type}}
+
 </rolltemplate>
 
 <!-- scripts -->
