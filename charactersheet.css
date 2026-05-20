@@ -254,16 +254,15 @@ span.decay-card{
 
 .inventory-head{
     display: flex;
-    padding: 5px;
     border:solid 1px;
 }
-
-.caps{
+.inventory-head-card{
     border: solid 1px;
     margin-right:10px;
     width: 25%;
 }
-.caps input[type="number"].caps-number{
+
+.inventory-head-card input[type="number"].inventory-head-card-number{
     width: 100%;
     text-align: center;
 }
