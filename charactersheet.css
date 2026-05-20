@@ -9,7 +9,7 @@ label.inline {
 .character-sheet{
     display:grid;
     grid-gap: 4px;
-    height:800px;
+    min-height:1000px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "info special special weapons"
@@ -17,7 +17,7 @@ label.inline {
     
 }
 
-/* Character sheet sections */
+/*----- Character sheet sections -----*/
 
 .section{
     border: 3px solid black;
@@ -49,11 +49,35 @@ label.inline {
     grid-area: inventory;
 }
 
-
+hr{
+    margin: 10px;
+}
 
 .character-info{
     margin-bottom:10px;
 }
+
+.level-xp{
+    display: flex;
+}
+.level-xp label{
+    margin-left: 5px;
+}
+.level-xp input{
+    
+}
+
+
+/*----- Skills -----*/
+
+.skill-box{
+    display: flex;
+}
+
+.skill-box label{
+    text-align: right;
+}
+/*----- Perks -----*/
 
 .perk-box{
     margin:0px;
@@ -69,7 +93,7 @@ label.inline {
 }
 
 
-/* Special Stats */
+/*----- Special Stats -----*/
 
 .special-scores{
     display: flex;
@@ -92,8 +116,88 @@ label.inline {
     width: 100%;
 }
 
+.character-stat input[type='number'].stat-num-sm{
+    width: 100%;
+}
 
-/* Weapon Cards */
+
+
+/*----- Body Attributes -----*/
+.body-grid{
+    display:grid;
+    grid-gap: 2px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "ac dt stamina hp hr"
+                         "armourupgrades armourupgrades sequence ap fatigue"
+                         "condition condition sense nerve groupsneak"
+                         "hunger thirst exhaustion radiationdc rads";
+    
+}
+
+.slot{ 
+   border: solid 1px;
+   padding: 0px;
+   margin: 0px;
+}
+
+.ac{
+    grid-area: ac;
+}
+.dt{
+    grid-area: dt;
+}
+.armourupgrades{
+    grid-area: armourupgrades;
+}
+.stamina{
+    grid-area: stamina;
+}
+.hp{
+    grid-area: hp;
+}
+.hr{
+    grid-area: hr;
+}
+.condition{
+    grid-area: condition;
+}
+.sequence{
+    grid-area: sequence;
+}
+.ap{
+    grid-area: ap;
+}
+.fatigue{
+    grid-area: fatigue;
+}
+.hunger{
+    grid-area: hunger;
+}
+.thirst{
+    grid-area: thirst;
+}
+.exhaustion{
+   grid-area: exhaustion; 
+}
+.radiationdc{
+    grid-area: radiationdc;
+}
+.rads{
+    grid-area: rads;
+}
+.sense{
+    grid-area: sense;
+}
+.nerve{
+    grid-area: nerve;
+}
+.groupsneak{
+    grid-area: groupsneak;
+}
+
+/*----- Weapon Cards ------*/
+
 .weapon-card{
     padding: 5px;
     margin-bottom: 5px;

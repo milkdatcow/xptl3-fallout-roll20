@@ -12,15 +12,77 @@
             <label class="inline" for="character-background">Background</label>
             <input type="text" id="character-background" name="attr_character_background">
         </div>
-        <div class="character-info">
-            <label class="inline" for="character-level">Level</label>
-            <input type="number" id="character-level" name="attr_character_level">
+        <span class="level-xp">
+            <div class="character-info">
+                <label class="inline" for="character-level">Level</label>
+                <input type="number" id="character-level" name="attr_character_level">
+            </div>
+            <div class="character-info">
+                <label class="inline" for="character-xp">XP</label>
+                <input type="number" id="character-xp" name="attr_character_xp">
+            </div>
+        </span>
+        <hr>
+
+        <div class="character-skills">
+            <h2>Skills</h2>
+            <span class="skill-box">
+                <label for="skill-barter">Barter</label>
+                <input type="number" id="skill-barter" name="attr_skill_barter">
+            </span>
+            <span class="skill-box">
+                <label for="skill-breach">Breach</label>
+                <input type="number" id="skill-breach" name="attr_skill_breach">
+            </span>
+            <span class="skill-box">
+                <label for="skill-crafting">Crafting</label>
+                <input type="number" id="skill-crafting" name="attr_skill_crafting">
+            </span>
+            <span class="skill-box">
+                <label for="skill-energy-weapons">Energy Weapons</label>
+                <input type="number" id="skill-energy-weapons" name="attr_skill_energy_weapons">
+            </span>
+            <span class="skill-box">
+                <label for="skill-explosives">Explosives</label>
+                <input type="number" id="skill-explosives" name="attr_skill_explosives">
+            </span>
+            <span class="skill-box">
+                <label for="skill-guns">Guns</label>
+                <input type="number" id="skill-guns" name="attr_skill_guns">
+            </span>
+            <span class="skill-box">
+                <label for="skill-intimidation">Intimidation</label>
+                <input type="number" id="skill-intimidation" name="attr_skill_intimidation">
+            </span>
+            <span class="skill-box">
+                <label for="skill-medicine">Medicine</label>
+                <input type="number" id="skill-medicine" name="attr_skill_medicine">
+            </span>
+            <span class="skill-box">
+                <label for="skill-melee-weapons">Melee Weapons</label>
+                <input type="number" id="skill-melee-weapons" name="attr_skill_melee_weapons">
+            </span>
+            <span class="skill-box">
+                <label for="skill-science">Science</label>
+                <input type="number" id="skill-science" name="attr_skill_science">
+            </span>
+            <span class="skill-box">
+                <label for="skill-sneak">Sneak</label>
+                <input type="number" id="skill-sneak" name="attr_skill_sneak">
+            </span>
+            <span class="skill-box">
+                <label for="skill-speech">Speech</label>
+                <input type="number" id="skill-speech" name="attr_skill_speech">
+            </span>
+            <span class="skill-box">
+                <label for="skill-survival">Survival</label>
+                <input type="number" id="skill-survival" name="attr_skill_survival">
+            </span>
+            <span class="skill-box">
+                <label for="skill-unarmed">Unarmed</label>
+                <input type="number" id="skill-unarmed" name="attr_skill_unarmed">
+            </span>
         </div>
-        <div class="character-info">
-            <label class="inline" for="character-xp">XP</label>
-            <input type="number" id="character-xp" name="attr_character_xp">
-        </div>
-        
     </div>
 
     <div class="section special">
@@ -28,32 +90,96 @@
             <div class="character-stat">
                 <label for="strength-score">S</label>
                 <input class="stat-num" type="number" id="strength-score" name="attr_strength">
+                <input class="stat-num-sm" type="number" id="strength-mod" name="attr_strength_mod">
             </div>
             <div class="character-stat">
-                <label for="strength-score">P</label>
+                <label for="perception-score">P</label>
                 <input class="stat-num" type="number" id="perception-score" name="attr_perception">
+                <input class="stat-num-sm" type="number" id="perception-mod" name="attr_perception_mod">
             </div>
             <div class="character-stat">
-                <label for="strength-score">E</label>
+                <label for="endurance-score">E</label>
                 <input class="stat-num" type="number" id="endurance-score" name="attr_endurance">
+                <input class="stat-num-sm" type="number" id="endurance-mod" name="attr_endurance_mod">
             </div>
             <div class="character-stat">
-                <label for="strength-score">C</label>
+                <label for="charisma-score">C</label>
                 <input class="stat-num" type="number" id="charisma-score" name="attr_charisma">
+                <input class="stat-num-sm" type="number" id="charisma-mod" name="attr_charisma_mod">
             </div>
             <div class="character-stat">
-                <label for="strength-score">I</label>
+                <label for="intelligence-score">I</label>
                 <input class="stat-num" type="number" id="intelligence-score" name="attr_intelligence">
+                <input class="stat-num-sm" type="number" id="intelligence-mod" name="attr_intelligence_mod">
             </div>
             <div class="character-stat">
-                <label for="strength-score">A</label>
+                <label for="agility-score">A</label>
                 <input class="stat-num" type="number" id="agility-score" name="attr_agility">
+                <input class="stat-num-sm" type="number" id="agility-mod" name="attr_agility_mod">
             </div>
             <div class="character-stat">
-                <label for="strength-score">L</label>
+                <label for="luck-score">L</label>
                 <input class="stat-num" type="number" id="luck-score" name="attr_luck">
+                <input class="stat-num-sm" type="number" id="luck-mod" name="attr_luck_mod">
             </div>
         </span>
+        <div class="body-grid">
+            <div class="slot ac">
+                AC
+            </div>
+            <div class="slot dt">
+                DT
+            </div>
+            <div class="slot armourupgrades">
+                Armour upgrades
+                Decay
+            </div>
+            <div class="slot stamina">
+                Stamina
+            </div>
+            <div class="slot hp">
+                HP
+            </div>
+            <div class="slot hr">
+                Healing Rate
+            </div>
+            <div class="slot condition">
+                Conditions
+            </div>
+            <div class="slot sequence">
+                Combat Sequence
+            </div>
+            <div class="slot ap">
+                AP
+            </div>
+            <div class="slot fatigue">
+                Fatigue
+            </div>
+            <div class="slot hunger">
+                Hunger
+            </div>
+            <div class="slot thirst">
+                Dehydration
+            </div>
+            <div class="slot exhaustion">
+                exhaustion
+            </div>
+            <div class="slot radiationdc">
+                Radiation DC
+            </div>
+            <div class="slot rads">
+                Rads
+            </div>
+            <div class="slot sense">
+                Passive sense
+            </div>
+            <div class="slot nerve">
+                Party nerve
+            </div>
+            <div class="slot groupsneak">
+                Group sneak
+            </div>
+        </div>
     </div>
 
     <div class="section weapons">
