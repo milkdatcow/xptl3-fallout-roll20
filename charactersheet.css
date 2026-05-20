@@ -77,6 +77,9 @@ hr{
     text-align: right;
 }
 
+.skill-descriptor{
+    font-size: 8px;
+}
 
 /*----- Perks -----*/
 
@@ -101,9 +104,16 @@ hr{
 }
 
 .character-stat{
-    width: 14%;
+    width: 14.2%;
     padding: 2px;
     margin: 0px;
+}
+
+.stat-roll{
+    padding: 0px !important;
+    width: 40% !important;
+    margin-left:30% !important;
+    margin-right:30% !important;
 }
 
 .character-stat label{
@@ -115,10 +125,21 @@ hr{
 
 .character-stat input[type='number'].stat-num{
     width: 100%;
+    text-align: center;
 }
 
 .character-stat input[type='number'].stat-num-sm{
     width: 100%;
+}
+
+.ability-score-mod-box{
+    display: flex;
+    justify-content: center;
+}
+
+.stat-descriptor{
+    font-size: 8px;
+    text-align: center;
 }
 
 
@@ -129,11 +150,11 @@ hr{
     grid-gap: 2px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: "ap stamina hp hr"
-                         "ac dt decay ."
-                         "sequence sense nerve groupsneak"
+    grid-template-areas: "ap ac dt decay"
+                         "hp maxhp stamina maxstamina "
+                         "sequence nerve groupsneak sense"
                          "hunger thirst exhaustion fatigue"
-                         "radiationdc rads . .";
+                         "radiationdc rads hr .";
     
 }
 
@@ -172,8 +193,14 @@ hr{
 .stamina{
     grid-area: stamina;
 }
+.maxstamina{
+    grid-area: maxstamina;
+}
 .hp{
     grid-area: hp;
+}
+.maxhp{
+    grid-area: maxhp;
 }
 .hr{
     grid-area: hr;
