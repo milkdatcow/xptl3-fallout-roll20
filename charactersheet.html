@@ -27,59 +27,59 @@
         <div class="character-skills">
             <h2>Skills</h2>
             <span class="skill-box">
-                <label for="skill-barter">Barter</label>
+                <button type="roll" name="roll_barter" value="&{template:skills} {{skillName=Barter}}  {{roll=[[1d20 + @{skill_barter} - @{hunger} - @{thirst} -@{exhaustion} - @{fatigue} - @{rads}]]}}">Barter</button>
                 <input type="number" id="skill-barter" name="attr_skill_barter">
             </span>
             <span class="skill-box">
-                <label for="skill-breach">Breach</label>
+                <button type="roll" name="roll_breach" value="&{template:skills} {{skillName=Breach}}  {{roll=[[1d20 + @{skill_breach}]]}}">Breach</button>
                 <input type="number" id="skill-breach" name="attr_skill_breach">
             </span>
             <span class="skill-box">
-                <label for="skill-crafting">Crafting</label>
+                <button type="roll" name="roll_crafting" value="&{template:skills} {{skillName=Crafting}}  {{roll=[[1d20 + @{skill_crafting}]]}}">Crafting</button>
                 <input type="number" id="skill-crafting" name="attr_skill_crafting">
             </span>
             <span class="skill-box">
-                <label for="skill-energy-weapons">Energy Weapons</label>
+                <button type="roll" name="roll_energy_weapons" value="&{template:skills} {{skillName=Energy Weapons}}  {{roll=[[1d20 + @{skill_energy_weapons}]]}}">Energy Weapons</button>
                 <input type="number" id="skill-energy-weapons" name="attr_skill_energy_weapons">
             </span>
             <span class="skill-box">
-                <label for="skill-explosives">Explosives</label>
+                <button type="roll" name="roll_explosives" value="&{template:skills} {{skillName=Explosives}}  {{roll=[[1d20 + @{skill_explosives}]]}}">Explosives</button>
                 <input type="number" id="skill-explosives" name="attr_skill_explosives">
             </span>
             <span class="skill-box">
-                <label for="skill-guns">Guns</label>
-                <input type="number" id="skill-guns" name="attr_skill_guns">
+                <button type="roll" name="roll_guns" value="&{template:skills} {{skillName=Guns}}  {{roll=[[1d20 + @{skill_guns}]]}}">Guns</button>
+                <input type="number" id="skill-guns" name="attr_skill_guns">                
             </span>
             <span class="skill-box">
-                <label for="skill-intimidation">Intimidation</label>
-                <input type="number" id="skill-intimidation" name="attr_skill_intimidation">
+                <button type="roll" name="roll_intimidation" value="&{template:skills} {{skillName=Intimidation}}  {{roll=[[1d20 + @{skill_intimidation}]]}}">Intimidation</button>
+                <input type="number" id="skill-intimidation" name="attr_skill_intimidation">                
             </span>
             <span class="skill-box">
-                <label for="skill-medicine">Medicine</label>
-                <input type="number" id="skill-medicine" name="attr_skill_medicine">
+                <button type="roll" name="roll_medicine" value="&{template:skills} {{skillName=Medicine}}  {{roll=[[1d20 + @{skill_medicine}]]}}">Medicine</button>
+                <input type="number" id="skill-medicine" name="attr_skill_medicine">                
             </span>
             <span class="skill-box">
-                <label for="skill-melee-weapons">Melee Weapons</label>
-                <input type="number" id="skill-melee-weapons" name="attr_skill_melee_weapons">
+                <button type="roll" name="roll_melee_weapons" value="&{template:skills} {{skillName=Melee Weapons}}  {{roll=[[1d20 + @{skill_melee_weapons}]]}}">Melee Weapons</button>
+                <input type="number" id="skill-melee-weapons" name="attr_skill_melee_weapons">                
             </span>
             <span class="skill-box">
-                <label for="skill-science">Science</label>
+                <button type="roll" name="roll_science" value="&{template:skills} {{skillName=Science}}  {{roll=[[1d20 + @{skill_Science}]]}}">Science</button>
                 <input type="number" id="skill-science" name="attr_skill_science">
             </span>
             <span class="skill-box">
-                <label for="skill-sneak">Sneak</label>
-                <input type="number" id="skill-sneak" name="attr_skill_sneak">
+                <button type="roll" name="roll_sneak" value="&{template:skills} {{skillName=Sneak}}  {{roll=[[1d20 + @{skill_sneak}]]}}">Sneak</button>
+                <input type="number" id="skill-sneak" name="attr_skill_sneak">                
             </span>
             <span class="skill-box">
-                <label for="skill-speech">Speech</label>
-                <input type="number" id="skill-speech" name="attr_skill_speech">
+                <button type="roll" name="roll_speech" value="&{template:skills} {{skillName=Speech}}  {{roll=[[1d20 + @{skill_speech}]]}}">Speech</button>
+                <input type="number" id="skill-speech" name="attr_skill_speech">                
             </span>
             <span class="skill-box">
-                <label for="skill-survival">Survival</label>
-                <input type="number" id="skill-survival" name="attr_skill_survival">
+                <button type="roll" name="roll_survival" value="&{template:skills} {{skillName=Survival}}  {{roll=[[1d20 + @{skill_survival}]]}}">Survival</button>
+                <input type="number" id="skill-survival" name="attr_skill_survival">                
             </span>
             <span class="skill-box">
-                <label for="skill-unarmed">Unarmed</label>
+                <button type="roll" name="roll_unarmed" value="&{template:skills} {{skillName=Unarmed}}  {{roll=[[1d20 + @{skill_unarmed}]]}}">Unarmed</button>
                 <input type="number" id="skill-unarmed" name="attr_skill_unarmed">
             </span>
         </div>
@@ -89,6 +89,7 @@
         <span class="special-scores">
             <div class="character-stat">
                 <label for="strength-score">S</label>
+                <button type="roll" name="roll_strength" value="&{template:skills} {{skillName=Strength}}  {{roll=[[1d20 + @{strength_mod}]]}}">S</button>
                 <input class="stat-num" type="number" id="strength-score" name="attr_strength">
                 <input class="stat-num-sm" type="number" id="strength-mod" name="attr_strength_mod">
             </div>
@@ -156,45 +157,89 @@
                 </span>
             </div>
             <div class="slot hr">
-                Healing Rate
+                <span class="body-span">
+                    <label for="hr-score">Healing Rate</label>
+                    <input class="body-stat" type="number" id="hr-score" name="attr_hr">
+                </span>
             </div>
-            <div class="slot condition">
-                Conditions
-            </div>
+           
             <div class="slot sequence">
-                Combat Sequence
+                <span class="body-span">
+                    <label for="sequence-score">Combat Sequence</label>
+                    <input class="body-stat" type="number" id="sequence-score" name="attr_sequence">
+                </span>
             </div>
             <div class="slot ap">
-                AP
+                <span class="body-span">
+                    <label for="ap-score">Action Points</label>
+                    <input class="body-stat" type="number" id="ap-score" name="attr_ap">
+                </span>
             </div>
             <div class="slot fatigue">
-                Fatigue
+                <span class="body-span">
+                    <label for="fatigue-score">Fatigue</label>
+                    <input class="body-stat" type="number" id="fatigue-score" name="attr_fatigue">
+                </span>
             </div>
             <div class="slot hunger">
-                Hunger
+                <span class="body-span">
+                    <label for="hunger-score">Hunger</label>
+                    <input class="body-stat" type="number" id="hunger-score" name="attr_hunger">
+                </span>
             </div>
             <div class="slot thirst">
-                Dehydration
+                <span class="body-span">
+                    <label for="thirst-score">Dehydration</label>
+                    <input class="body-stat" type="number" id="thirst-score" name="attr_thirst">
+                </span>
             </div>
             <div class="slot exhaustion">
-                exhaustion
+                <span class="body-span">
+                    <label for="thirst-score">Exhaustion</label>
+                    <input class="body-stat" type="number" id="exhaustion-score" name="attr_exhaustion">
+                </span>
             </div>
             <div class="slot radiationdc">
-                Radiation DC
+                <span class="body-span">
+                    <label for="radiationdc-score">Radiation DC</label>
+                    <input class="body-stat" type="text" id="radiationdc-score" name="attr_radiationdc">
+                </span>
             </div>
             <div class="slot rads">
-                Rads
+                <span class="body-span">
+                    <label for="rads-score">Radiation</label>
+                    <input class="body-stat" type="number" id="rads-score" name="attr_rads">
+                </span>
             </div>
             <div class="slot sense">
-                Passive sense
+                <span class="body-span">
+                    <label for="sense-score">Passive Sense</label>
+                    <input class="body-stat" type="number" id="sense-score" name="attr_sense">
+                </span>
             </div>
             <div class="slot nerve">
-                Party nerve
+                <span class="body-span">
+                    <label for="nerve-score">Party Nerve</label>
+                    <input class="body-stat" type="number" id="nerve-score" name="attr_nerve">
+                </span>
             </div>
             <div class="slot groupsneak">
-                Group sneak
+                <span class="body-span">
+                    <label for="groupsneak-score">Group Sneak</label>
+                    <input class="body-stat" type="number" id="groupsneak-score" name="attr_groupsneak">
+                </span>
             </div>
         </div>
+        <span class="body-span">
+            <label for="armourupgrades">Armour Upgrades</label>
+            <textarea name="attr_armourupgrades" id="armourupgrades" class="conditions-box"></textarea>
+        </span>
+        <span class="body-span">
+            <label for="conditions">Conditions</label>
+            <textarea name="attr_conditions" id="conditions" class="conditions-box"></textarea>
+        </span>
+        
+        
     </div>
 
     <div class="section weapons">
@@ -241,6 +286,49 @@
     </div>
 
     <div class="section inventory">
-        Inventory
+        <h2>Inventory</h2>
+        <span class="inventory-head">
+            <div class="caps">
+                <label for="caps-total">Caps</label>
+                <input class="caps-number" type="number" id="caps-total" name="attr_caps"/>
+            </div>
+            <div class="carry-load">
+                <label for="carry-load-total">Carry Load</label>
+                <input class="carry-load-number" type="number" id="carry-load-total" name="attr_carry_load"/>
+            </div>
+        </span>
+        <div class="inventory-plane">
+            Item Load
+            <fieldset class="repeating_invetory">
+                <div class="inventory-box">
+                    <input type="text" name="attr_name"/>
+                    <input type="number" name="attr_load"/>
+                </div>
+            </fieldset>
+        </div>
     </div>
 </div>
+
+<!-- roll templates -->
+<rolltemplate class="sheet-rolltemplate-skills">
+    <!-- todo -->
+     
+        
+      {{#skillName}}
+        <div class="sheet-skillName">
+          {{skillName}}
+        </div>
+      {{/skillName}}
+      
+      
+      {{#roll}}
+        <div class="sheet-roll">
+          {{roll}}
+        </div>
+      {{/roll}}
+</rolltemplate>
+
+<!-- scripts -->
+<script type="text/worker">
+    
+</script>

@@ -70,11 +70,14 @@ hr{
 
 .skill-box{
     display: flex;
+    justify-content: flex-end;
 }
 
 .skill-box label{
     text-align: right;
 }
+
+
 /*----- Perks -----*/
 
 .perk-box{
@@ -127,10 +130,10 @@ hr{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "ap stamina hp hr"
-                         "ac dt decay decay"
+                         "ac dt decay ."
                          "sequence sense nerve groupsneak"
                          "hunger thirst exhaustion fatigue"
-                         "radiationdc rads condition condition";
+                         "radiationdc rads . .";
     
 }
 
@@ -147,11 +150,16 @@ hr{
     width: 100%;
     margin: 0px;
     padding: 0px;
+    font-size: 10px;
 }
 .body-span input[type='number'].body-stat{
     width: 100%;
+    text-align: center;
 }
-
+.body-span input[type='text'].body-stat{
+    width: 100%;
+    text-align: center;
+}
 .ac{
     grid-area: ac;
 }
@@ -169,9 +177,6 @@ hr{
 }
 .hr{
     grid-area: hr;
-}
-.condition{
-    grid-area: condition;
 }
 .sequence{
     grid-area: sequence;
@@ -207,6 +212,10 @@ hr{
     grid-area: groupsneak;
 }
 
+.body-span textarea.conditions-box{
+    height: 50px;
+}
+
 /*----- Weapon Cards ------*/
 
 .weapon-card{
@@ -238,4 +247,62 @@ span.ammo{
 
 span.decay-card{
     display: flex;
+}
+
+
+/*----- Inventory -----*/
+
+.inventory-head{
+    display: flex;
+    padding: 5px;
+    border:solid 1px;
+}
+
+.caps{
+    border: solid 1px;
+    margin-right:10px;
+    width: 25%;
+}
+.caps input[type="number"].caps-number{
+    width: 100%;
+    text-align: center;
+}
+.carry-load{
+    border:solid 1px;
+    width: 25%;
+}
+.carry-load input[type="number"].carry-load-number{
+    width: 100%;
+    text-align: center;
+}
+
+
+/* Roll Templates */
+
+.sheet-rolltemplate-skills{
+    background-color: #4c4c4c;
+    padding: 10px;
+    text-align: center;
+    border: solid 1px black;
+    border-radius: 5px;
+
+}
+.sheet-rolltemplate-skills .sheet-skillName{
+    margin-bottom: 10px;
+    font-size: 12pt;
+    
+}
+
+.ui-dialog .charsheet button[type=roll] {
+  height: 19px;
+  border: 0px;
+  color: #4c4c4c;
+  background-color: transparent;
+  padding: 5px;
+  border-radius: 0px;
+  box-shadow: none;
+  background-image: none;
+}
+.ui-dialog .charsheet button[type=roll]:before {
+  content: " ";
 }
