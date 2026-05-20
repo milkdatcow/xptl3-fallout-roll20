@@ -1,6 +1,14 @@
 h1 {
     text-align:center
 }
+h2{
+    color: rgb(255 255 255 / 87%);
+    font-size: 14pt;
+}
+h3{
+    color: rgb(255 255 255 / 60%);
+    font-size: 8pt;
+}
 
 label.inline {
     display: inline;
@@ -14,37 +22,46 @@ label.inline {
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "info special special weapons"
                          "perks perks inventory inventory";
-    
+    background-color: #121212;
+    color: rgb(255 255 255 / 87%);
+
 }
+
+.sheetform{
+    background-color: #121212 !important;
+}
+
+
 
 /*----- Character sheet sections -----*/
 
 .section{
-    border: 3px solid black;
     padding:10px;
 }
 
 .info{
     grid-area: info;
+    background-color: rgb(255 255 255 / 5%);
 }
 
 .special{
     grid-area: special;
+    background-color: rgb(255 255 255 / 5%);
 }
 
 .weapons{
-    
     grid-area: weapons;
+    background-color: rgb(255 255 255 / 5%);
 }
 
 .perks{
-    
     grid-area: perks;
+    background-color: rgb(255 255 255 / 5%);
 }
 
 .inventory{
-
     grid-area: inventory;
+    background-color: rgb(255 255 255 / 5%);
 }
 
 hr{
@@ -60,9 +77,6 @@ hr{
 }
 .level-xp label{
     margin-left: 5px;
-}
-.level-xp input{
-    
 }
 
 
@@ -93,7 +107,11 @@ hr{
 }
 
 .perk-box textarea{
-    height:50px;
+    height: 50px;
+    background-color: rgb(255 255 255 / 16%);
+    color: rgb(255 255 255 / 87%);
+    border: none;
+    border-bottom: solid rgb(255 255 255 / 60%);
 }
 
 
@@ -159,7 +177,6 @@ hr{
 }
 
 .slot{ 
-   border: solid 1px;
    padding: 0px;
    margin: 0px;
 }
@@ -241,6 +258,10 @@ hr{
 
 .body-span textarea.conditions-box{
     height: 50px;
+    background-color: rgb(255 255 255 / 16%);
+    color: rgb(255 255 255 / 87%);
+    border: none;
+    border-bottom: solid rgb(255 255 255 / 60%);
 }
 
 /*----- Weapon Cards ------*/
@@ -248,7 +269,6 @@ hr{
 .weapon-card{
     padding: 5px;
     margin-bottom: 5px;
-    border: solid 1px;
 }
 .weapon-card input{
 
@@ -276,15 +296,25 @@ span.decay-card{
     display: flex;
 }
 
+.reload{
+    height: 19px;
+    border: 0px;
+    color: rgb(255 255 255 / 60%);
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 0px;
+    box-shadow: none;
+    background-image: none;
+    text-shadow: none;
+}
+
 
 /*----- Inventory -----*/
 
 .inventory-head{
     display: flex;
-    border:solid 1px;
 }
 .inventory-head-card{
-    border: solid 1px;
     margin-right:10px;
     width: 25%;
 }
@@ -294,7 +324,6 @@ span.decay-card{
     text-align: center;
 }
 .carry-load{
-    border:solid 1px;
     width: 25%;
 }
 .carry-load input[type="number"].carry-load-number{
@@ -302,6 +331,32 @@ span.decay-card{
     text-align: center;
 }
 
+.carry-load-total{
+    text-align: center;
+    margin: auto;
+}
+.inventory-headers{
+    display: flex;
+}
+
+.object_box{
+    width: 70%;
+}
+
+.object_num_box{
+    width: 20%;
+}
+
+.inventory-box{
+    margin-bottom: 5px;
+}
+
+.item-header{
+    width: 71%;
+}
+.lq-header{
+    width: 12.5%;
+}
 
 /* Roll Templates */
 
@@ -339,16 +394,38 @@ span.decay-card{
     margin:10px;
 }
 
+/*----- Other random stuff ----*/
+
 .ui-dialog .charsheet button[type=roll] {
   height: 19px;
   border: 0px;
-  color: #4c4c4c;
+  color: rgb(255 255 255 / 87%);
   background-color: transparent;
   padding: 5px;
   border-radius: 0px;
   box-shadow: none;
   background-image: none;
+  text-shadow: none;
 }
 .ui-dialog .charsheet button[type=roll]:before {
   content: " ";
+}
+
+
+.ui-dialog .charsheet input{
+    background-color: rgb(255 255 255 / 16%);
+    color: rgb(255 255 255 / 87%);
+    border:none;
+    border-bottom: solid rgb(255 255 255 / 60%);
+}
+
+.btn, .btn.btn-default{
+    height: 19px;
+    color: rgb(255 255 255 / 87%);
+    background-color: rgb(255 255 255 / 7%);
+    padding: 5px;
+    border-radius: 0px;
+    box-shadow: none;
+    background-image: none;
+    text-shadow: none;
 }
