@@ -10,7 +10,7 @@ label.inline {
     display:grid;
     grid-gap: 4px;
     min-height:1000px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 250px 150px 150px 250px;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "info special special weapons"
                          "perks perks inventory inventory";
@@ -25,12 +25,10 @@ label.inline {
 }
 
 .info{
-    
     grid-area: info;
 }
 
 .special{
-    
     grid-area: special;
 }
 
@@ -126,12 +124,13 @@ hr{
 .body-grid{
     display:grid;
     grid-gap: 2px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "ac dt stamina hp hr"
-                         "armourupgrades armourupgrades sequence ap fatigue"
-                         "condition condition sense nerve groupsneak"
-                         "hunger thirst exhaustion radiationdc rads";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "ap stamina hp hr"
+                         "ac dt decay decay"
+                         "sequence sense nerve groupsneak"
+                         "hunger thirst exhaustion fatigue"
+                         "radiationdc rads condition condition";
     
 }
 
@@ -140,6 +139,18 @@ hr{
    padding: 0px;
    margin: 0px;
 }
+.body-span{
+
+}
+.body-span label{
+    text-align: center;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.body-span input[type='number'].body-stat{
+    width: 100%;
+}
 
 .ac{
     grid-area: ac;
@@ -147,8 +158,8 @@ hr{
 .dt{
     grid-area: dt;
 }
-.armourupgrades{
-    grid-area: armourupgrades;
+.decay{
+    grid-area: decay;
 }
 .stamina{
     grid-area: stamina;
