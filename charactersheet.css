@@ -172,12 +172,13 @@ hr{
     display:grid;
     grid-gap: 2px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "ap ac dt decay"
                          "hp maxhp stamina maxstamina "
                          "sequence nerve groupsneak sense"
                          "hunger thirst exhaustion fatigue"
-                         "radiationdc rads hr .";
+                         "radiationdc rads hr ."
+                         "hypothermia overheating . .";
     
 }
 
@@ -259,6 +260,12 @@ hr{
 }
 .groupsneak{
     grid-area: groupsneak;
+}
+.hypothermia{
+
+}
+.overheating{
+
 }
 
 .body-span textarea.conditions-box{

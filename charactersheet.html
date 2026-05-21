@@ -183,7 +183,7 @@
            
             <div class="slot sequence">
                 <span class="body-span">
-                    <button class="body-roll-sequence" type="roll" name="roll_sequence" value="&{template:skills} {{skillName=Combat Sequence}}  {{roll=[[1d20 + @{sequence} - @{strain}]]}}">Combat Sequence</button>
+                    <button class="body-roll-sequence" type="roll" name="roll_sequence" value="&{template:skills} {{skillName=Combat Sequence}}  {{roll=[[1d20 + @{sequence} - @{strain} &{tracker}]]}}">Combat Sequence</button>
                     <input class="body-stat" type="number" id="sequence-score" name="attr_sequence">
                 </span>
             </div>
@@ -245,6 +245,18 @@
                 <span class="body-span">
                     <label for="groupsneak-score">Group Sneak</label>
                     <input class="body-stat" type="number" id="groupsneak-score" name="attr_groupsneak">
+                </span>
+            </div>
+            <div class="slot hypothermia">
+                <span class="body-span">
+                    <label for="hypothermia-score">Hypothermia</label>
+                    <input class="body-stat" type="number" id="hypothermia-score" name="attr_hypothermia">
+                </span>
+            </div>
+            <div class="slot overheating">
+                <span class="body-span">
+                    <label for="overheating-score">Overheating</label>
+                    <input class="body-stat" type="number" id="overheating-score" name="attr_overheating">
                 </span>
             </div>
         </div>
@@ -440,23 +452,25 @@
         });
     });
 
-    const ailments = ["hunger", "thirst", "exhaustion", "fatigue", "rads"]
+    const ailments = ["hunger", "thirst", "exhaustion", "fatigue", "rads", "hypothermia", "overheating"]
     ailments.forEach(ailment =>{
         on(`change:${ailment}`, () => {
-            getAttrs(["hunger", "thirst", "exhaustion", "fatigue", "rads"], values => {
+            getAttrs(["hunger", "thirst", "exhaustion", "fatigue", "rads", "hypothermia", "overheating"], values => {
                 const hunger_total = parseInt(values.hunger);
                 const thirst_total = parseInt(values.thirst);
                 const exhaustion_total = parseInt(values.exhaustion);
                 const fatigue_total = parseInt(values.fatigue);
                 const rads_total = parseInt(values.rads);
+                const hypothermia_total = parseInt(values.hypothermia);
+                const overheating_total = parseInt(values.overheating);
                 
-                const strain_total = hunger_total + thirst_total + exhaustion_total + fatigue_total + rads_total;
+                const strain_total = hunger_total + thirst_total + exhaustion_total + fatigue_total + rads_total + hypothermia_total + overheating_total;
                 console.log(strain_total);
 
                 setAttrs({
                     "strain": strain_total
                 });
-                });
+                }); 
             });
         });
 
