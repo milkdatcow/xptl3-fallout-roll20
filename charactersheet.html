@@ -22,64 +22,72 @@
                 <input type="number" id="character-xp" name="attr_character_xp">
             </div>
         </span>
+        <div class="advantage-toggle-pane">
+                <input class="adv-radio" id="advantage" type="radio" name="attr_d20" value="2d20kh1" />
+                <label class="advantage-toggle" for="advantage">Advantage</label>
+                <input class="adv-radio" id="normal" type="radio" name="attr_d20" value="1d20" checked />
+                <label class="advantage-toggle" for="normal">Normal</label>
+                <input class="adv-radio" id="disadvantage" type="radio" name="attr_d20" value="2d20kl1" />
+                <label class="advantage-toggle" for="disadvantage">Disadvantage</label>
+        </div>
         <hr>
 
         <div class="character-skills">
             <h2>Skills</h2>
             <span class="skill-box">
-                <button type="roll" name="roll_barter" value="&{template:skills} {{skillName=Barter}}  {{roll=[[1d20 + @{skill_barter} - @{strain}]]}}"><span class="skill-descriptor">(Charisma) </span>Barter</button>
+                <button type="roll" name="roll_barter" value="&{template:skills} {{skillName=Barter}}  {{roll=[[@{d20} + @{skill_barter} - @{strain}]]}}"><span class="skill-descriptor">(Charisma) </span>Barter</button>
                 <input type="number" id="skill-barter" name="attr_skill_barter">
             </span>
             <span class="skill-box">
-                <button type="roll" name="roll_breach" value="&{template:skills} {{skillName=Breach}}  {{roll=[[1d20 + @{skill_breach} - @{strain}]]}}"><span class="skill-descriptor">(Perception or Intelligence) </span>Breach</button>
+                <button type="roll" name="roll_breach" value="&{template:skills} {{skillName=Breach}}  {{roll=[[@{d20} + @{skill_breach} - @{strain}]]}}"><span class="skill-descriptor">(Perception or Intelligence) </span>Breach</button>
                 <input type="number" id="skill-breach" name="attr_skill_breach">
             </span>
             <span class="skill-box">
-                <button type="roll" name="roll_crafting" value="&{template:skills} {{skillName=Crafting}}  {{roll=[[1d20 + @{skill_crafting} - @{strain}]]}}"><span class="skill-descriptor">(Intelligence) </span>Crafting</button>
+                <button type="roll" name="roll_crafting" value="&{template:skills} {{skillName=Crafting}}  {{roll=[[@{d20} + @{skill_crafting} - @{strain}]]}}"><span class="skill-descriptor">(Intelligence) </span>Crafting</button>
                 <input type="number" id="skill-crafting" name="attr_skill_crafting">
             </span>
             <span class="skill-box">
-                <button type="roll" name="roll_energy_weapons" value="&{template:skills} {{skillName=Energy Weapons}}  {{roll=[[1d20 + @{skill_energy_weapons} - @{strain}]]}}"><span class="skill-descriptor">(Perception) </span> Energy Weapons</button>
+                <button type="roll" name="roll_energy_weapons" value="&{template:skills} {{skillName=Energy Weapons}}  {{roll=[[@{d20} + @{skill_energy_weapons} - @{strain}]]}}"><span class="skill-descriptor">(Perception) </span> Energy Weapons</button>
                 <input type="number" id="skill-energy-weapons" name="attr_skill_energy_weapons">
             </span>
             <span class="skill-box">
-                <button type="roll" name="roll_explosives" value="&{template:skills} {{skillName=Explosives}}  {{roll=[[1d20 + @{skill_explosives} - @{strain}]]}}"><span class="skill-descriptor">(Perception) </span>Explosives</button>
+                <button type="roll" name="roll_explosives" value="&{template:skills} {{skillName=Explosives}}  {{roll=[[@{d20} + @{skill_explosives} - @{strain}]]}}"><span class="skill-descriptor">(Perception) </span>Explosives</button>
                 <input type="number" id="skill-explosives" name="attr_skill_explosives">
             </span>
             <span class="skill-box">
-                <button type="roll" name="roll_guns" value="&{template:skills} {{skillName=Guns}}  {{roll=[[1d20 + @{skill_guns} - @{strain}]]}}"><span class="skill-descriptor">(Agility) </span>Guns</button>
+                <button type="roll" name="roll_guns" value="&{template:skills} {{skillName=Guns}}  {{roll=[[@{d20} + @{skill_guns} - @{strain}]]}}"><span class="skill-descriptor">(Agility) </span>Guns</button>
                 <input type="number" id="skill-guns" name="attr_skill_guns">                
             </span>
             <span class="skill-box">
-                <button type="roll" name="roll_intimidation" value="&{template:skills} {{skillName=Intimidation}}  {{roll=[[1d20 + @{skill_intimidation} - @{strain}]]}}"><span class="skill-descriptor">(Strength or Charisma) </span>Intimidation</button>
+                <button type="roll" name="roll_intimidation" value="&{template:skills} {{skillName=Intimidation}}  {{roll=[[@{d20} + @{skill_intimidation} - @{strain}]]}}"><span class="skill-descriptor">(Strength or Charisma) </span>Intimidation</button>
                 <input type="number" id="skill-intimidation" name="attr_skill_intimidation">                
             </span>
             <span class="skill-box">
-                <button type="roll" name="roll_medicine" value="&{template:skills} {{skillName=Medicine}}  {{roll=[[1d20 + @{skill_medicine} - @{strain}]]}}"><span class="skill-descriptor">(Perception or Intelligence) </span>Medicine</button>
+                <button type="roll" name="roll_medicine" value="&{template:skills} {{skillName=Medicine}}  {{roll=[[@{d20} + @{skill_medicine} - @{strain}]]}}"><span class="skill-descriptor">(Perception or Intelligence) </span>Medicine</button>
                 <input type="number" id="skill-medicine" name="attr_skill_medicine">                
             </span>
             <span class="skill-box">
-                <button type="roll" name="roll_melee_weapons" value="&{template:skills} {{skillName=Melee Weapons}}  {{roll=[[1d20 + @{skill_melee_weapons} - @{strain}]]}}"><span class="skill-descriptor">(Strength) </span>Melee Weapons</button>
+                <button type="roll" name="roll_melee_weapons" value="&{template:skills} {{skillName=Melee Weapons}}  {{roll=[[@{d20} + @{skill_melee_weapons} - @{strain}]]}}"><span class="skill-descriptor">(Strength) </span>Melee Weapons</button>
                 <input type="number" id="skill-melee-weapons" name="attr_skill_melee_weapons">                
             </span>
             <span class="skill-box">
-                <button type="roll" name="roll_science" value="&{template:skills} {{skillName=Science}}  {{roll=[[1d20 + @{skill_Science} - @{strain}]]}}"><span class="skill-descriptor">(Intelligence) </span>Science</button>
+                <button type="roll" name="roll_science" value="&{template:skills} {{skillName=Science}}  {{roll=[[@{d20} + @{skill_Science} - @{strain}]]}}"><span class="skill-descriptor">(Intelligence) </span>Science</button>
                 <input type="number" id="skill-science" name="attr_skill_science">
             </span>
             <span class="skill-box">
-                <button type="roll" name="roll_sneak" value="&{template:skills} {{skillName=Sneak}}  {{roll=[[1d20 + @{skill_sneak} - @{strain}]]}}"><span class="skill-descriptor">(Agility) </span>Sneak</button>
+                <button type="roll" name="roll_sneak" value="&{template:skills} {{skillName=Sneak}}  {{roll=[[@{d20} + @{skill_sneak} - @{strain}]]}}"><span class="skill-descriptor">(Agility) </span>Sneak</button>
                 <input type="number" id="skill-sneak" name="attr_skill_sneak">                
             </span>
             <span class="skill-box">
-                <button type="roll" name="roll_speech" value="&{template:skills} {{skillName=Speech}}  {{roll=[[1d20 + @{skill_speech} - @{strain}]]}}"><span class="skill-descriptor">(Charisma) </span>Speech</button>
+                <button type="roll" name="roll_speech" value="&{template:skills} {{skillName=Speech}}  {{roll=[[@{d20} + @{skill_speech} - @{strain}]]}}"><span class="skill-descriptor">(Charisma) </span>Speech</button>
                 <input type="number" id="skill-speech" name="attr_skill_speech">                
             </span>
             <span class="skill-box">
-                <button type="roll" name="roll_survival" value="&{template:skills} {{skillName=Survival}}  {{roll=[[1d20 + @{skill_survival} - @{strain}]]}}"><span class="skill-descriptor">(Endurance) </span>Survival</button>
+                <button type="roll" name="roll_survival" value="&{template:skills} {{skillName=Survival}}  {{roll=[[@{d20} + @{skill_survival} - @{strain}]]}}"><span class="skill-descriptor">(Endurance) </span>Survival</button>
                 <input type="number" id="skill-survival" name="attr_skill_survival">                
             </span>
             <span class="skill-box">
-                <button type="roll" name="roll_unarmed" value="&{template:skills} {{skillName=Unarmed}}  {{roll=[[1d20 + @{skill_unarmed} - @{strain}]]}}"><span class="skill-descriptor">(Strength) </span>Unarmed</button>
+                <button type="roll" name="roll_unarmed" value="&{template:skills} {{skillName=Unarmed}}  {{roll=[[@{d20} + @{skill_unarmed} - @{strain}]]}}"><span class="skill-descriptor">(Strength) </span>Unarmed</button>
                 <input type="number" id="skill-unarmed" name="attr_skill_unarmed">
             </span>
         </div>
@@ -88,43 +96,43 @@
     <div class="section special">
         <span class="special-scores">
             <div class="character-stat">
-                <button class="stat-roll" type="roll" name="roll_strength" value="&{template:skills} {{skillName=Strength}}  {{roll=[[1d20 + @{strength_mod} - @{strain}]]}}">S</button>
+                <button class="stat-roll" type="roll" name="roll_strength" value="&{template:skills} {{skillName=Strength}}  {{roll=[[@{d20} + @{strength_mod} - @{strain}]]}}">S</button>
                 <div class="stat-descriptor">Str</div>
                 <input class="stat-num" type="number" id="strength-score" name="attr_strength">
                 <span class="ability-score-mod-box" name="attr_strength_mod">0</span>
             </div>
             <div class="character-stat">
-                <button class="stat-roll" type="roll" name="roll_perception" value="&{template:skills} {{skillName=Perception}}  {{roll=[[1d20 + @{perception_mod} - @{strain}]]}}">P</button>
+                <button class="stat-roll" type="roll" name="roll_perception" value="&{template:skills} {{skillName=Perception}}  {{roll=[[@{d20} + @{perception_mod} - @{strain}]]}}">P</button>
                 <div class="stat-descriptor">Per</div>
                 <input class="stat-num" type="number" id="perception-score" name="attr_perception">
                 <span class="ability-score-mod-box" name="attr_perception_mod">0</span>
             </div>
             <div class="character-stat">
-                <button class="stat-roll" type="roll" name="roll_endurance" value="&{template:skills} {{skillName=Endurance}}  {{roll=[[1d20 + @{endurance_mod} - @{strain}]]}}">E</button>
+                <button class="stat-roll" type="roll" name="roll_endurance" value="&{template:skills} {{skillName=Endurance}}  {{roll=[[@{d20} + @{endurance_mod} - @{strain}]]}}">E</button>
                 <div class="stat-descriptor">End</div>
                 <input class="stat-num" type="number" id="endurance-score" name="attr_endurance">
                 <span class="ability-score-mod-box" name="attr_endurance_mod">0</span>
             </div>
             <div class="character-stat">
-                <button class="stat-roll" type="roll" name="roll_charisma" value="&{template:skills} {{skillName=Charisma}}  {{roll=[[1d20 + @{charisma_mod} - @{strain}]]}}">C</button>
+                <button class="stat-roll" type="roll" name="roll_charisma" value="&{template:skills} {{skillName=Charisma}}  {{roll=[[@{d20} + @{charisma_mod} - @{strain}]]}}">C</button>
                 <div class="stat-descriptor">Cha</div>
                 <input class="stat-num" type="number" id="charisma-score" name="attr_charisma">
                 <span class="ability-score-mod-box" name="attr_charisma_mod">0</span>
             </div>
             <div class="character-stat">
-                <button class="stat-roll" type="roll" name="roll_intelligence" value="&{template:skills} {{skillName=Intelligence}}  {{roll=[[1d20 + @{intelligence_mod} - @{strain}]]}}">I</button>
+                <button class="stat-roll" type="roll" name="roll_intelligence" value="&{template:skills} {{skillName=Intelligence}}  {{roll=[[@{d20} + @{intelligence_mod} - @{strain}]]}}">I</button>
                 <div class="stat-descriptor">Int</div>
                 <input class="stat-num" type="number" id="intelligence-score" name="attr_intelligence">
                 <span class="ability-score-mod-box" name="attr_intelligence_mod">0</span>
             </div>
             <div class="character-stat">
-                <button class="stat-roll" type="roll" name="roll_agility" value="&{template:skills} {{skillName=Agility}}  {{roll=[[1d20 + @{agility_mod} - @{strain}]]}}">A</button>
+                <button class="stat-roll" type="roll" name="roll_agility" value="&{template:skills} {{skillName=Agility}}  {{roll=[[@{d20} + @{agility_mod} - @{strain}]]}}">A</button>
                 <div class="stat-descriptor">Agi</div>
                 <input class="stat-num" type="number" id="agility-score" name="attr_agility">
                 <span class="ability-score-mod-box" name="attr_agility_mod">0</span>
             </div>
             <div class="character-stat">
-                <button class="stat-roll" type="roll" name="roll_luck" value="&{template:skills} {{skillName=Luck}}  {{roll=[[1d20 + @{luck_mod}]]}}">L</button>
+                <button class="stat-roll" type="roll" name="roll_luck" value="&{template:skills} {{skillName=Luck}}  {{roll=[[@{d20} + @{luck_mod}]]}}">L</button>
                 <div class="stat-descriptor">Lck</div>
                 <input class="stat-num" type="number" id="luck-score" name="attr_luck">
                 <span class="ability-score-mod-box" name="attr_luck_mod">0</span>
@@ -159,7 +167,7 @@
             <div class="slot maxstamina">
                 <span class="body-span">
                     <label for="max-stamina-score">Max Stamina</label>
-                    <input class="body-stat" type="number" id="max-stamina-score" name="attr_max_stamina">
+                    <input class="body-stat" type="number" id="max-stamina-score" name="attr_stamina_max">
                 </span>
             </div>
             <div class="slot hp">
@@ -171,7 +179,7 @@
             <div class="slot maxhp">
                 <span class="body-span">
                     <label for="maxhp-score">Max HP</label>
-                    <input class="body-stat" type="number" id="maxhp-score" name="attr_max_hp">
+                    <input class="body-stat" type="number" id="maxhp-score" name="attr_hp_max">
                 </span>
             </div>
             <div class="slot hr">
@@ -183,7 +191,7 @@
            
             <div class="slot sequence">
                 <span class="body-span">
-                    <button class="body-roll-sequence" type="roll" name="roll_sequence" value="&{template:skills} {{skillName=Combat Sequence}}  {{roll=[[1d20 + @{sequence} - @{strain} &{tracker}]]}}">Combat Sequence</button>
+                    <button class="body-roll-sequence" type="roll" name="roll_sequence" value="&{template:skills} {{skillName=Combat Sequence}}  {{roll=[[@{d20} + @{sequence} - @{strain} &{tracker}]]}}">Combat Sequence</button>
                     <input class="body-stat" type="number" id="sequence-score" name="attr_sequence">
                 </span>
             </div>
@@ -290,7 +298,7 @@
             <div class="weapon-card">
                 <div class="weapon-card-row">
                     <input class="weapon" spellcheck="false" type="text" name="attr_weaponname" placeholder="Weapon">
-                    <button type="roll" name="roll_weapon" value="&{template:weapon} {{weaponName=@{weaponname}}}  {{roll=[[1d20 +@{weapon_attack} - @{strain} -@{weapon_decay}]]}} {{damage=[[@{weapon_damage}]]}} {{type=@{weapon_damage_type}}}">Roll</button>
+                    <button type="roll" name="roll_weapon" value="&{template:weapon} {{weaponName=@{weaponname}}}  {{roll=[[@{d20} +@{weapon_attack} - @{strain} -@{weapon_decay}]]}} {{damage=[[@{weapon_damage}]]}} {{type=@{weapon_damage_type}}}">Roll</button>
                 </div>
                 <div class="weapon-card-row">
                     <span class="weapon-stats">
