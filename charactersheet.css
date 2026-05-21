@@ -100,6 +100,8 @@ hr{
 .perk-box{
     margin:0px;
     margin-bottom: 5px;
+    background-color: rgb(255 255 255 / 7%);
+    padding: 5px;
 }
 
 .perk-box input{
@@ -108,10 +110,11 @@ hr{
 
 .perk-box textarea{
     height: 50px;
-    background-color: rgb(255 255 255 / 16%);
+    background-color: rgb(255 255 255 / 12%);
     color: rgb(255 255 255 / 87%);
     border: none;
     border-bottom: solid rgb(255 255 255 / 60%);
+    width: 98%;
 }
 
 
@@ -258,10 +261,41 @@ hr{
 
 .body-span textarea.conditions-box{
     height: 50px;
-    background-color: rgb(255 255 255 / 16%);
+    background-color: rgb(255 255 255 / 12%);
     color: rgb(255 255 255 / 87%);
     border: none;
     border-bottom: solid rgb(255 255 255 / 60%);
+}
+
+.sequence-score-label{
+    font-size: 7px !important;
+}
+
+.body-roll-sequence{
+    text-align: center !important;
+    width: 100% !important;
+    margin: 0px !important;
+    padding: 0px !important;    
+    font-size: 8px !important;
+    height: 18px !important;
+}
+
+/*----- Karma Caps -----*/
+.karma-cap-section{
+    
+}
+
+.karma-box{
+   
+}
+
+.karma-select{
+    background-color: rgb(255 255 255 / 12%);
+    color: rgb(255 255 255 / 87%);
+}
+
+option{
+    background-color:#121212;
 }
 
 /*----- Weapon Cards ------*/
@@ -269,37 +303,64 @@ hr{
 .weapon-card{
     padding: 5px;
     margin-bottom: 5px;
+    background-color: rgb(255 255 255 / 7%);
+}
+.weapon-card-row{
+   
+    margin-bottom: 5px;
+   
 }
 .weapon-card input{
+    width: 100%;
+}
 
+.weapon-card-label{
+    margin: 0px !important;
+    font-size: 12px !important;
+    width: 35% !important;
+    padding: 0px !important;
+}
+.weapon-card-label-attack{
+    margin: 0px !important;
+    font-size: 11px !important;
+    width: 35% !important;
+    padding: 0px !important;
 }
 input.weapon{
-    width: 40%;
+    width: 75%;
 }
 span.weapon-stats{
     display: flex;
+    align-items:flex-end;
 }
 
 .weapon-stats input{
-    width: 22%;
+    width: 30%;
 }
 
 .weapon-stats input.range{
-    width: 33%;
+    width: 30%;
 }
 
 span.ammo{
     display:flex;
+    align-items: flex-end;
 }
-
+.slash{
+    margin:0px
+}
+.ammo-count{
+    width: 3.0em !important;
+}
 span.decay-card{
     display: flex;
+    align-items: flex-end;
 }
 
 .reload{
     height: 19px;
     border: 0px;
-    color: rgb(255 255 255 / 60%);
+    color: rgb(255 255 255 / 87%);
     background-color: transparent;
     padding: 5px;
     border-radius: 0px;
@@ -365,7 +426,7 @@ span.decay-card{
     padding: 10px;
     text-align: center;
     border: solid 1px black;
-    border-radius: 5px;
+    border-radius: 3px;
 
 }
 .sheet-rolltemplate-skills .sheet-skillName{
@@ -379,7 +440,7 @@ span.decay-card{
     padding: 10px;
     text-align: center;
     border: solid 1px black;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 .sheet-rolltemplate-weapon .sheet-weaponName{
@@ -399,7 +460,7 @@ span.decay-card{
 .ui-dialog .charsheet button[type=roll] {
   height: 19px;
   border: 0px;
-  color: rgb(255 255 255 / 87%);
+  color: #adfa9e;
   background-color: transparent;
   padding: 5px;
   border-radius: 0px;
@@ -413,7 +474,7 @@ span.decay-card{
 
 
 .ui-dialog .charsheet input{
-    background-color: rgb(255 255 255 / 16%);
+    background-color: rgb(255 255 255 / 12%);
     color: rgb(255 255 255 / 87%);
     border:none;
     border-bottom: solid rgb(255 255 255 / 60%);
