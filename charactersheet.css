@@ -19,7 +19,7 @@ label.inline {
     grid-gap: 4px;
     min-height:1000px;
     grid-template-columns: 250px 150px 150px 250px;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto ;
     grid-template-areas: "info special special weapons"
                          "perks perks inventory inventory";
     background-color: #121212;
@@ -29,6 +29,7 @@ label.inline {
 
 .sheetform{
     background-color: #121212 !important;
+    width: 832px !important;
 }
 
 
@@ -102,6 +103,7 @@ hr{
     margin-bottom: 5px;
     background-color: rgb(255 255 255 / 7%);
     padding: 5px;
+    border-radius: 3px;
 }
 
 .perk-box input{
@@ -304,6 +306,7 @@ option{
     padding: 5px;
     margin-bottom: 5px;
     background-color: rgb(255 255 255 / 7%);
+    border-radius: 3px;
 }
 .weapon-card-row{
    
