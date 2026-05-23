@@ -359,7 +359,11 @@
         <fieldset class="repeating_perks">
             <div class="perk-box">
                 <input type="text" name="attr_name"/>
-                <textarea name="attr_description"></textarea>
+                <button type="roll" value="&{template:paste} {{perkname=@{name}}} {{perkdetails=@{description}}}">Paste</button>
+                <details>
+                    <summary class="description-toggle"><span>Description</span></summary>
+                    <textarea name="attr_description"></textarea>
+                </details>
             </div>
         </fieldset>
     </div>
@@ -438,6 +442,22 @@
         {{type}}
     </div>
     {{/type}}
+
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-paste">
+
+    {{#perkname}}
+    <div class="sheet-perkname">
+        {{perkname}}
+    </div>
+    {{/perkname}}
+
+    {{#perkdetails}}
+    <div class="sheet-perkdetails">
+        {{perkdetails}}
+    </div>
+    {{/perkdetails}}
 
 </rolltemplate>
 

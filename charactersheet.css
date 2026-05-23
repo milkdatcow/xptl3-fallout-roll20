@@ -119,6 +119,15 @@ hr{
     width: 98%;
 }
 
+.description-toggle{
+    color: #adfa9e;
+    padding: 5px 5px 5px 0px;
+
+}
+
+.description-toggle:hover{
+    cursor: pointer;
+}
 
 /*----- Special Stats -----*/
 
