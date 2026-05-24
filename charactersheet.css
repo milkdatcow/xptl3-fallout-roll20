@@ -14,7 +14,34 @@ label.inline {
     display: inline;
 }
 
-.character-sheet{
+
+.charsheet .sheet-character,
+.charsheet .sheet-junk {
+    display: none;
+}
+
+
+.charsheet .sheet-tabstoggle[value="character"] ~ div .sheet-button0 {background-color: #adfa9e; color: #121212;}
+.charsheet .sheet-tabstoggle[value="junk"] ~ div .sheet-button1 {background-color: #adfa9e; color: #121212;}
+.sheet-button0, .sheet-button1{
+    background-color: rgb(255 255 255 / 7%);
+    color: rgb(255 255 255 / 87%);
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 3px;
+    border:2px transparent;
+    margin-bottom: 10px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+
+.charsheet .sheet-tabstoggle[value="character"] ~ div.sheet-character,
+.charsheet .sheet-tabstoggle[value="junk"] ~ div.sheet-junk{
+    display: grid;
+}
+
+.sheet-character{
     display:grid;
     grid-gap: 4px;
     min-height:1000px;
@@ -129,6 +156,7 @@ hr{
     cursor: pointer;
 }
 
+
 /*----- Special Stats -----*/
 
 .special-scores{
@@ -186,7 +214,7 @@ hr{
                          "hp maxhp stamina maxstamina "
                          "sequence nerve groupsneak sense"
                          "hunger thirst exhaustion fatigue"
-                         "radiationdc rads hr ."
+                         "radiationdc rads irradiated hr"
                          "hypothermia overheating . .";
     
 }
@@ -260,6 +288,9 @@ hr{
 }
 .rads{
     grid-area: rads;
+}
+.irradiated{
+    grid-area: irradiated;
 }
 .sense{
     grid-area: sense;
@@ -451,7 +482,6 @@ span.decay-card{
 .sheet-rolltemplate-skills .sheet-skillName{
     margin-bottom: 10px;
     font-size: 12pt;
-    
 }
 
 .sheet-rolltemplate-weapon{
@@ -474,6 +504,19 @@ span.decay-card{
     margin:10px;
 }
 
+.sheet-rolltemplate-paste {
+    background-color: #4c4c4c;
+    padding: 10px;
+    text-align: center;
+    border: solid 1px black;
+    border-radius: 3px;
+}
+
+.sheet-rolltemplate-paste .sheet-perkname{
+    font-size: 12pt;
+    margin-bottom: 10px;
+
+}
 /*----- Advantage Toggle -----*/
 .advantage-toggle-pane{
  
@@ -507,6 +550,7 @@ span.decay-card{
 
 .advantage-toggle-pane label:hover {
   background-color: rgb(255 255 255 / 16%);
+  cursor: pointer;
 }
 
 /*----- Other random stuff ----*/
@@ -545,3 +589,60 @@ span.decay-card{
     text-shadow: none;
 }
 
+
+/*----- Junk Screen -----*/
+
+
+.junk-grid{
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: 30% 30%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "left right";
+}
+
+.junk-section{
+    background-color: rgb(255 255 255 / 5%);
+    padding: 10px;
+}
+
+.junk-header{
+    display:flex;
+  
+}
+.junk-header h2{
+   
+}
+
+.junk-grid-left{
+    grid-area: left;
+}
+
+.junk-grid-right{
+    grid-area: right;
+}
+
+.junk-row{
+    display:flex;
+    align-items: flex-end;
+    margin-bottom: 5px;
+}
+
+.junk-row label{
+    width: 50%;
+    text-align:end;
+    margin-bottom: 0px;
+    font-size: 14px;
+    color: rgb(255 255 255 / 87%) !important;
+}
+
+.junk-row h2{
+    margin-right: 10px;
+    font-size: 14pt;
+}
+
+.junk-total{
+    font-size: 14pt;
+    line-height: 36px;
+    color: rgb(255 255 255 / 87%);
+}

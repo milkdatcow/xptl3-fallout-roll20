@@ -1,4 +1,11 @@
-<div class="character-sheet">
+<input type="hidden" class="sheet-tabstoggle" name="attr_sheetTab" value="character" />
+
+<div>
+    <button type="action" name="act_character" class="sheet-button0">Character</button>
+    <button type="action" name="act_junk" class="sheet-button1">Junk</button>
+</div>
+
+<div class="sheet-character">
     <div class="section info">
         <div class="character-info">
             <label class="inline" for="character-name">Name</label>
@@ -237,6 +244,12 @@
                     <input class="body-stat" type="number" id="rads-score" name="attr_rads">
                 </span>
             </div>
+            <div class="slot irradiated">
+                <span class="body-span">
+                    <label for="irradiated-score">Irradiated</label>
+                    <input class="body-stat" type="number" id="irradiated-score" name="attr_irradiated">
+                </span>
+            </div>
             <div class="slot sense">
                 <span class="body-span">
                     <label for="sense-score">Passive Sense</label>
@@ -378,6 +391,7 @@
             <div class="inventory-head-card">
                 <label for="carry-load-total">Carry Load</label>
                 <span id="carry-load-total" name="attr_carry_load"></span>
+                <input type="hidden" name="attr_inventory_load" value="0" />
             </div>
             <div class="inventory-head-card">
                 <label for="max-load-total">Max Load</label>
@@ -389,7 +403,7 @@
                 <h3 class="item-header">Item</h3>
                 <h3 class="lq-header">Load</h3>
                 <h3 class="lq-header">Quantity</h3>
-            </span>
+            </span> 
             <fieldset class="repeating_inventory">
                 <div class="inventory-box">
                     <input type="text" name="attr_object_name" class="object_box"/>
@@ -397,6 +411,47 @@
                     <input type="number" name="attr_object_quantity" class="object_number_box"/>
                 </div>
             </fieldset>
+        </div>
+    </div>
+</div>
+
+<div class="sheet-junk">
+    <div class="junk-section">
+        <span class="junk-header"><h2>Junk</h2></span>
+        <span class="junk-row"><h2>Load</h2><span class="junk-total" name="attr_junktotal">0</span></span>
+        <div class="junk-grid">
+            <div class="junk-grid-left">
+                <span class="junk-row"><label for="junk-counter-acid">Acid</label><input type="number" id="junk-counter-acid" name="attr_acid"></span>
+                <span class="junk-row"><label for="junk-counter-adhesive">Adhesive</label><input type="number" id="junk-counter-adhesive" name="attr_adhesive"></span>
+                <span class="junk-row"><label for="junk-counter-aluminium">Aluminium</label><input type="number" id="junk-counter-aluminium" name="attr_aluminium"></span>
+                <span class="junk-row"><label for="junk-counter-antiseptic">Antiseptic</label><input type="number" id="junk-counter-antiseptic" name="attr_antiseptic"></span>
+                <span class="junk-row"><label for="junk-counter-asbestos">Asbestos</label><input type="number" id="junk-counter-asbestos" name="attr_asbestos"></span>
+                <span class="junk-row"><label for="junk-counter-ballisticfibre">Ballistic Fibre</label><input type="number" id="junk-counter-ballisticfibre" name="attr_ballisticfibre"></span>
+                <span class="junk-row"><label for="junk-counter-ceramic">Ceramic</label><input type="number" id="junk-counter-ceramic" name="attr_ceramic"></span>
+                <span class="junk-row"><label for="junk-counter-circuitry">Circuitry</label><input type="number" id="junk-counter-circuitry" name="attr_circuitry"></span>
+                <span class="junk-row"><label for="junk-counter-cloth">Cloth</label><input type="number" id="junk-counter-cloth" name="attr_cloth"></span>
+                <span class="junk-row"><label for="junk-counter-copper">Copper</label><input type="number" id="junk-counter-copper" name="attr_copper"></span>
+                <span class="junk-row"><label for="junk-counter-crystal">Crystal</label><input type="number" id="junk-counter-crystal" name="attr_crystal"></span>
+                <span class="junk-row"><label for="junk-counter-fertilizer">Fertilizer</label><input type="number" id="junk-counter-fertilizer" name="attr_fertilizer"></span>
+                <span class="junk-row"><label for="junk-counter-fibreoptics">Fibre Optics</label><input type="number" id="junk-counter-fibreoptics" name="attr_fibreoptics"></span>
+                <span class="junk-row"><label for="junk-counter-fibreglass">Fibreglass</label><input type="number" id="junk-counter-fibreglass" name="attr_fibreglass"></span>
+            </div>
+            <div class="junk-grid-right">
+                <span class="junk-row"><label for="junk-counter-gears">Gears</label><input type="number" id="junk-counter-gears" name="attr_gears"></span>
+                <span class="junk-row"><label for="junk-counter-glass">Glass</label><input type="number" id="junk-counter-glass" name="attr_glass"></span>
+                <span class="junk-row"><label for="junk-counter-lead">Lead</label><input type="number" id="junk-counter-lead" name="attr_lead"></span>
+                <span class="junk-row"><label for="junk-counter-leather">Leather</label><input type="number" id="junk-counter-leather" name="attr_leather"></span>
+                <span class="junk-row"><label for="junk-counter-nuclearmaterial">Nuclear Material</label><input type="number" id="junk-counter-nuclearmaterial" name="attr_nuclearmaterial"></span>
+                <span class="junk-row"><label for="junk-counter-oil">Oil</label><input type="number" id="junk-counter-oil" name="attr_oil"></span>
+                <span class="junk-row"><label for="junk-counter-paint">Paint</label><input type="number" id="junk-counter-paint" name="attr_paint"></span>
+                <span class="junk-row"><label for="junk-counter-plastic">Plastic</label><input type="number" id="junk-counter-plastic" name="attr_plastic"></span>
+                <span class="junk-row"><label for="junk-counter-rubber">Rubber</label><input type="number" id="junk-counter-rubber" name="attr_rubber"></span>
+                <span class="junk-row"><label for="junk-counter-screw">Screw</label><input type="number" id="junk-counter-screw" name="attr_screw"></span>
+                <span class="junk-row"><label for="junk-counter-silver">Silver</label><input type="number" id="junk-counter-silver" name="attr_silver"></span>
+                <span class="junk-row"><label for="junk-counter-spring">Spring</label><input type="number" id="junk-counter-spring" name="attr_spring"></span>
+                <span class="junk-row"><label for="junk-counter-steel">Steel</label><input type="number" id="junk-counter-steel" name="attr_steel"></span>
+                <span class="junk-row"><label for="junk-counter-wood">Wood</label><input type="number" id="junk-counter-wood" name="attr_wood"></span>
+            </div>
         </div>
     </div>
 </div>
@@ -484,13 +539,13 @@
     ailments.forEach(ailment =>{
         on(`change:${ailment}`, () => {
             getAttrs(["hunger", "thirst", "exhaustion", "fatigue", "rads", "hypothermia", "overheating"], values => {
-                const hunger_total = parseInt(values.hunger);
-                const thirst_total = parseInt(values.thirst);
-                const exhaustion_total = parseInt(values.exhaustion);
-                const fatigue_total = parseInt(values.fatigue);
-                const rads_total = parseInt(values.rads);
-                const hypothermia_total = parseInt(values.hypothermia);
-                const overheating_total = parseInt(values.overheating);
+                const hunger_total = parseInt(values.hunger) || 0;
+                const thirst_total = parseInt(values.thirst) || 0;
+                const exhaustion_total = parseInt(values.exhaustion) || 0;
+                const fatigue_total = parseInt(values.fatigue) || 0;
+                const rads_total = parseInt(values.rads) || 0;
+                const hypothermia_total = parseInt(values.hypothermia) || 0;
+                const overheating_total = parseInt(values.overheating) || 0;
                 
                 const strain_total = hunger_total + thirst_total + exhaustion_total + fatigue_total + rads_total + hypothermia_total + overheating_total;
                 console.log(strain_total);
@@ -503,9 +558,7 @@
         });
 
 
-    on('change:repeating_inventory remove:repeating_inventory', function() {
-	    repeatingSum("carry_load","inventory",["object_load","object_quantity"]);
-    });
+    
 
     on("clicked:repeating_weapons:reload", function(eventInfo) {
 		getAttrs([
@@ -546,5 +599,72 @@ const repeatingSum = (destinations, section, fields) => {
         }); 
     }); 
 };
+
+const buttonlist = ["character", "junk"];
+    buttonlist.forEach(button => {
+        on(`clicked:${button}`, function() {
+            setAttrs({
+                sheetTab: button
+            });
+        });
+    })
+
+    const junkItems = ["acid", "adhesive", "aluminium", "antiseptic", "asbestos", "ballisticfibre", "ceramic", "circuitry", "cloth", "copper", "crystal", "fertilizer", "fibreoptics", "fibreglass", "gears", "glass", "lead", "leather", "nuclearmaterial", "oil", "paint", "plastic", "rubber", "screw", "silver", "spring", "steel", "wood"];
+    const junkEvents = junkItems.map(junk => `change:${junk}`).join(" ");
+
+    on(junkEvents, () => {
+        getAttrs(junkItems, values => {
+            const acid_total = parseInt(values.acid) || 0;
+            const adhesive_total = parseInt(values.adhesive) || 0;
+            const aluminium_total = parseInt(values.aluminium) || 0;
+            const antiseptic_total = parseInt(values.antiseptic) || 0;
+            const asbestos_total = parseInt(values.asbestos) || 0;
+            const ballisticfibre_total = parseInt(values.ballisticfibre) || 0;
+            const ceramic_total = parseInt(values.ceramic) || 0;
+            const circuitry_total = parseInt(values.circuitry) || 0;
+            const cloth_total = parseInt(values.cloth) || 0;
+            const copper_total = parseInt(values.copper) || 0;
+            const crystal_total = parseInt(values.crystal) || 0;
+            const fertilizer_total = parseInt(values.fertilizer) || 0;
+            const fibreoptics_total = parseInt(values.fibreoptics) || 0;
+            const fibreglass_total = parseInt(values.fibreglass) || 0;
+            const gears_total = parseInt(values.gears) || 0;
+            const glass_total = parseInt(values.glass) || 0;
+            const lead_total = parseInt(values.lead) || 0;
+            const leather_total = parseInt(values.leather) || 0;
+            const nuclearmaterial_total = parseInt(values.nuclearmaterial) || 0;
+            const oil_total = parseInt(values.oil) || 0;
+            const paint_total = parseInt(values.paint) || 0;
+            const plastic_total = parseInt(values.plastic) || 0;
+            const rubber_total = parseInt(values.rubber) || 0;
+            const screw_total = parseInt(values.screw) || 0;
+            const silver_total = parseInt(values.silver) || 0;
+            const spring_total = parseInt(values.spring) || 0;
+            const steel_total = parseInt(values.steel) || 0;
+            const wood_total = parseInt(values.wood) || 0;
+            
+            const junk_total = (acid_total + adhesive_total + aluminium_total + antiseptic_total + asbestos_total + ballisticfibre_total + ceramic_total + circuitry_total + cloth_total + copper_total + crystal_total+ fertilizer_total + fibreoptics_total + fibreglass_total + gears_total + glass_total + lead_total + leather_total + nuclearmaterial_total + oil_total + paint_total + plastic_total + rubber_total + screw_total + silver_total + spring_total + steel_total + wood_total) / 10;
+
+            setAttrs({
+                "junktotal": junk_total,
+            });
+        });
+    });
+
+    on('change:repeating_inventory remove:repeating_inventory', function() {
+        repeatingSum("inventory_load", "inventory", ["object_load", "object_quantity"]);
+    });
+
+    on('change:inventory_load change:junktotal', function() {
+    getAttrs(['inventory_load', 'junktotal'], function(v) {
+        const invWeight = parseFloat(v.inventory_load) || 0;
+        const junkWeight = parseFloat(v.junktotal) || 0;
+        
+        setAttrs({
+            "carry_load": invWeight + junkWeight
+        });
+    });
+});
+        
 
 </script>
