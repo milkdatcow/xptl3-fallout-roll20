@@ -646,3 +646,19 @@ span.decay-card{
     line-height: 36px;
     color: rgb(255 255 255 / 87%);
 }
+
+
+/*----- Monster Statblock -----*/
+
+.monster-grid{
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: 30% 30%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "left right";
+}
+
+.monster-section{
+    background-color: rgb(255 255 255 / 5%);
+    padding: 10px;
+}
