@@ -16,14 +16,17 @@ label.inline {
 
 
 .charsheet .sheet-character,
-.charsheet .sheet-junk {
+.charsheet .sheet-junk,
+.charsheet .sheet-monster{
     display: none;
 }
 
 
 .charsheet .sheet-tabstoggle[value="character"] ~ div .sheet-button0 {background-color: #adfa9e; color: #121212;}
 .charsheet .sheet-tabstoggle[value="junk"] ~ div .sheet-button1 {background-color: #adfa9e; color: #121212;}
-.sheet-button0, .sheet-button1{
+.charsheet .sheet-tabstoggle[value="monster"] ~ div .sheet-button2 {background-color: #adfa9e; color: #121212;}
+
+.sheet-button0, .sheet-button1, .sheet-button2{
     background-color: rgb(255 255 255 / 7%);
     color: rgb(255 255 255 / 87%);
     font-size: 12px;
@@ -37,7 +40,8 @@ label.inline {
 
 
 .charsheet .sheet-tabstoggle[value="character"] ~ div.sheet-character,
-.charsheet .sheet-tabstoggle[value="junk"] ~ div.sheet-junk{
+.charsheet .sheet-tabstoggle[value="junk"] ~ div.sheet-junk,
+.charsheet .sheet-tabstoggle[value="monster"] ~ div.sheet-monster{
     display: grid;
 }
 
@@ -195,6 +199,7 @@ hr{
 .ability-score-mod-box{
     display: flex;
     justify-content: center;
+    color: rgb(255 255 255 / 87%);
 }
 
 .stat-descriptor{
@@ -650,15 +655,74 @@ span.decay-card{
 
 /*----- Monster Statblock -----*/
 
+div.attack-view-detailed,
+div.attack-view-simplified {
+    display: none;
+}
+
+input.toggle-control[value="detailed"] ~ div.attack-view-detailed {
+    display: block;
+}
+
+input.toggle-control[value="simplified"] ~ div.attack-view-simplified {
+    display: block;
+}
+
+textarea.monster-special{
+    height: 60px;
+}
+
+textarea.monster-special.big-text {
+    height: 120px;
+}
+
+.attack-view-select{
+    background-color: rgb(255 255 255 / 8%);
+    color: rgb(255 255 255 / 87%);
+}
+
 .monster-grid{
     display: grid;
-    grid-gap: 2px;
-    grid-template-columns: 30% 30%;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "left right";
+    grid-template-areas: "mleft mright";
+    padding: 10px;
 }
 
 .monster-section{
     background-color: rgb(255 255 255 / 5%);
-    padding: 10px;
+}
+
+
+.monser-grid-left{
+    grid-area: mleft;
+}
+
+.monster-grid-right{
+    grid-area: mright;
+}
+
+span.monster-stat-span{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+}
+
+.monster-stat-span label{
+    width: 20%;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.monster-info-box{
+    width: 95% !important;
+    background-color: rgb(255 255 255 / 7%);
+    color: rgb(255 255 255 / 87%);
+}
+
+.monster-special{
+    width: 95% !important;
+    background-color: rgb(255 255 255 / 7%);
+    color: rgb(255 255 255 / 87%);
 }
