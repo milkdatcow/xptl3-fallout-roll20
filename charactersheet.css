@@ -14,6 +14,10 @@ label.inline {
     display: inline;
 }
 
+label{
+    color: rgb(255 255 255 / 60%) !important;
+}
+
 
 .charsheet .sheet-character,
 .charsheet .sheet-junk,
@@ -111,6 +115,9 @@ hr{
     margin-left: 5px;
 }
 
+.xp-input{
+    width: 4em !important;
+}
 
 /*----- Skills -----*/
 
@@ -125,6 +132,15 @@ hr{
 
 .skill-descriptor{
     font-size: 8px;
+}
+
+input[type="text"].skill-total {
+    width: 30px !important;
+    text-align: center;
+    background-color: transparent !important;
+    border: none !important;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 /*----- Perks -----*/
@@ -475,52 +491,39 @@ span.decay-card{
 }
 
 /* Roll Templates */
-
-.sheet-rolltemplate-skills{
-    background-color: #4c4c4c;
+.sheet-rolltemplate-skills,
+.sheet-rolltemplate-weapon,
+.sheet-rolltemplate-paste{
+    background-color: #212121;
     padding: 10px;
     text-align: center;
     border: solid 1px black;
-    border-radius: 3px;
-
-}
-.sheet-rolltemplate-skills .sheet-skillName{
-    margin-bottom: 10px;
-    font-size: 12pt;
+    border-radius: 6px;
+    color: rgb(255 255 255 / 87%);
 }
 
-.sheet-rolltemplate-weapon{
-    background-color: #4c4c4c;
-    padding: 10px;
-    text-align: center;
-    border: solid 1px black;
-    border-radius: 3px;
-}
-
+.sheet-rolltemplate-skills .sheet-skillName,
 .sheet-rolltemplate-weapon .sheet-weaponName{
     margin-bottom: 10px;
-    font-size: 12pt;
+    font-size: 14pt;
 }
 
-.sheet-rolltemplate-weapon .sheet-roll{
-    margin:10px;
-}
+.sheet-rolltemplate-weapon .sheet-roll,
 .sheet-rolltemplate-weapon .sheet-damage{
-    margin:10px;
+    margin:12px;
 }
 
-.sheet-rolltemplate-paste {
-    background-color: #4c4c4c;
-    padding: 10px;
-    text-align: center;
-    border: solid 1px black;
-    border-radius: 3px;
+.sheet-rolltemplate-skills .inlinerollresult,
+.sheet-rolltemplate-weapon .inlinerollresult,
+.sheet-rolltemplate-paste .inlinerollresult {
+    background-color: transparent;
+    border: none;
+    
 }
 
 .sheet-rolltemplate-paste .sheet-perkname{
-    font-size: 12pt;
+    font-size: 14pt;
     margin-bottom: 10px;
-
 }
 /*----- Advantage Toggle -----*/
 .advantage-toggle-pane{
@@ -594,6 +597,7 @@ span.decay-card{
     background-image: none;
     text-shadow: none;
 }
+
 
 
 /*----- Junk Screen -----*/

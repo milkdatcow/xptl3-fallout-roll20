@@ -27,7 +27,7 @@
             </div>
             <div class="character-info">
                 <label class="inline" for="character-xp">XP</label>
-                <input type="number" id="character-xp" name="attr_character_xp">
+                <input type="number" id="character-xp" name="attr_character_xp" class="xp-input">
             </div>
         </span>
         <div class="advantage-toggle-pane">
@@ -49,60 +49,74 @@
         <div class="character-skills">
             <h2>Skills</h2>
             <span class="skill-box">
-                <button type="roll" name="roll_barter" value="@{whisper} &{template:skills} {{skillName=Barter}}  {{roll=[[@{d20}+@{skill_barter}-@{strain}]]}}"><span class="skill-descriptor">(Charisma) </span>Barter</button>
-                <input type="number" id="skill-barter" name="attr_skill_barter">
+                <button type="roll" name="roll_barter" value="@{whisper} &{template:skills} {{skillName=Barter}}  {{roll=[[@{d20}+@{skill_barter}-@{strain}]]}}"><span class="skill-descriptor">(Cha) </span>Barter</button>
+                <input type="text" class="skill-total" name="attr_skill_barter" value="0" readonly >
+                <input type="number" name="attr_skill_barter_bonus" value="0" title="Points Spent">
             </span>
             <span class="skill-box">
-                <button type="roll" name="roll_breach" value="&{template:skills} {{skillName=Breach}}  {{roll=[[@{d20}+@{skill_breach}-@{strain}]]}}"><span class="skill-descriptor">(Perception or Intelligence) </span>Breach</button>
-                <input type="number" id="skill-breach" name="attr_skill_breach">
+                <button type="roll" name="roll_breach" value="@whisper &{template:skills} {{skillName=Breach}}  {{roll=[[@{d20}+@{skill_breach}-@{strain}]]}}"><span class="skill-descriptor">(Per or Int) </span>Breach</button>
+                <input type="text" class="skill-total" name="attr_skill_breach" value="0" readonly>
+                <input type="number" name="attr_skill_breach_bonus" value="0" title="Points Spent">
             </span>
             <span class="skill-box">
-                <button type="roll" name="roll_crafting" value="&{template:skills} {{skillName=Crafting}}  {{roll=[[@{d20}+@{skill_crafting}-@{strain}]]}}"><span class="skill-descriptor">(Intelligence) </span>Crafting</button>
-                <input type="number" id="skill-crafting" name="attr_skill_crafting">
+                <button type="roll" name="roll_crafting" value="@whisper &{template:skills} {{skillName=Crafting}}  {{roll=[[@{d20}+@{skill_crafting}-@{strain}]]}}"><span class="skill-descriptor">(Int) </span>Crafting</button>
+                <input type="text" class="skill-total" name="attr_skill_crafting" value="0" readonly>
+                <input type="number" name="attr_skill_crafting_bonus" value="0" title="Points Spent">
             </span>
             <span class="skill-box">
-                <button type="roll" name="roll_energy_weapons" value="&{template:skills} {{skillName=Energy Weapons}}  {{roll=[[@{d20}+@{skill_energy_weapons}-@{strain}]]}}"><span class="skill-descriptor">(Perception) </span> Energy Weapons</button>
-                <input type="number" id="skill-energy-weapons" name="attr_skill_energy_weapons">
+                <button type="roll" name="roll_energy_weapons" value="@whisper &{template:skills} {{skillName=Energy Weapons}}  {{roll=[[@{d20}+@{skill_energy_weapons}-@{strain}]]}}"><span class="skill-descriptor">(Per) </span> Energy Weapons</button>
+                <input type="text" class="skill-total" name="attr_skill_energy_weapons" value="0" readonly>
+                <input type="number" name="attr_skill_energy_weapons_bonus" value="0" title="Points Spent">
             </span>
             <span class="skill-box">
-                <button type="roll" name="roll_explosives" value="&{template:skills} {{skillName=Explosives}}  {{roll=[[@{d20}+@{skill_explosives}-@{strain}]]}}"><span class="skill-descriptor">(Perception) </span>Explosives</button>
-                <input type="number" id="skill-explosives" name="attr_skill_explosives">
+                <button type="roll" name="roll_explosives" value="@{whisper} &{template:skills} {{skillName=Explosives}}  {{roll=[[@{d20}+@{skill_explosives}-@{strain}]]}}"><span class="skill-descriptor">(Per) </span>Explosives</button>
+                <input type="text" class="skill-total" name="attr_skill_explosives" value="0" readonly>
+                <input type="number" name="attr_skill_explosives_bonus" value="0" title="Points Spent">
             </span>
             <span class="skill-box">
-                <button type="roll" name="roll_guns" value="&{template:skills} {{skillName=Guns}}  {{roll=[[@{d20}+@{skill_guns}-@{strain}]]}}"><span class="skill-descriptor">(Agility) </span>Guns</button>
-                <input type="number" id="skill-guns" name="attr_skill_guns">                
+                <button type="roll" name="roll_guns" value="@{whisper} &{template:skills} {{skillName=Guns}}  {{roll=[[@{d20}+@{skill_guns}-@{strain}]]}}"><span class="skill-descriptor">(Agi) </span>Guns</button>
+                <input type="text" class="skill-total" name="attr_skill_guns" value="0" readonly>
+                <input type="number" name="attr_skill_guns_bonus" value="0" title="Points Spent">             
             </span>
             <span class="skill-box">
-                <button type="roll" name="roll_intimidation" value="&{template:skills} {{skillName=Intimidation}}  {{roll=[[@{d20}+@{skill_intimidation}-@{strain}]]}}"><span class="skill-descriptor">(Strength or Charisma) </span>Intimidation</button>
-                <input type="number" id="skill-intimidation" name="attr_skill_intimidation">                
+                <button type="roll" name="roll_intimidation" value="@{whisper} &{template:skills} {{skillName=Intimidation}}  {{roll=[[@{d20}+@{skill_intimidation}-@{strain}]]}}"><span class="skill-descriptor">(Str or Cha) </span>Intimidation</button>
+                <input type="text" class="skill-total" name="attr_skill_intimidation" value="0" readonly>
+                <input type="number" name="attr_skill_intimidation_bonus" value="0" title="Points Spent">               
             </span>
             <span class="skill-box">
-                <button type="roll" name="roll_medicine" value="&{template:skills} {{skillName=Medicine}}  {{roll=[[@{d20}+@{skill_medicine}-@{strain}]]}}"><span class="skill-descriptor">(Perception or Intelligence) </span>Medicine</button>
-                <input type="number" id="skill-medicine" name="attr_skill_medicine">                
+                <button type="roll" name="roll_medicine" value="@{whisper} &{template:skills} {{skillName=Medicine}}  {{roll=[[@{d20}+@{skill_medicine}-@{strain}]]}}"><span class="skill-descriptor">(Per or Int) </span>Medicine</button>
+                <input type="text" class="skill-total" name="attr_skill_medicine" value="0" readonly>
+                <input type="number" name="attr_skill_medicine_bonus" value="0" title="Points Spent">              
             </span>
             <span class="skill-box">
-                <button type="roll" name="roll_melee_weapons" value="&{template:skills} {{skillName=Melee Weapons}}  {{roll=[[@{d20}+@{skill_melee_weapons}-@{strain}]]}}"><span class="skill-descriptor">(Strength) </span>Melee Weapons</button>
-                <input type="number" id="skill-melee-weapons" name="attr_skill_melee_weapons">                
+                <button type="roll" name="roll_melee_weapons" value="@{whisper} &{template:skills} {{skillName=Melee Weapons}}  {{roll=[[@{d20}+@{skill_melee_weapons}-@{strain}]]}}"><span class="skill-descriptor">(Str) </span>Melee Weapons</button>
+                <input type="text" class="skill-total" name="attr_skill_melee_weapons" value="0" readonly>
+                <input type="number" name="attr_skill_melee_weapons_bonus" value="0" title="Points Spent">                 
             </span>
             <span class="skill-box">
-                <button type="roll" name="roll_science" value="&{template:skills} {{skillName=Science}}  {{roll=[[@{d20}+@{skill_Science}-@{strain}]]}}"><span class="skill-descriptor">(Intelligence) </span>Science</button>
-                <input type="number" id="skill-science" name="attr_skill_science">
+                <button type="roll" name="roll_science" value="@{whusper} &{template:skills} {{skillName=Science}}  {{roll=[[@{d20}+@{skill_Science}-@{strain}]]}}"><span class="skill-descriptor">(Int) </span>Science</button>
+                <input type="text" class="skill-total" name="attr_skill_science" value="0" readonly>
+                <input type="number" name="attr_skill_science_bonus" value="0" title="Points Spent">  
             </span>
             <span class="skill-box">
-                <button type="roll" name="roll_sneak" value="&{template:skills} {{skillName=Sneak}}  {{roll=[[@{d20}+@{skill_sneak}-@{strain}]]}}"><span class="skill-descriptor">(Agility) </span>Sneak</button>
-                <input type="number" id="skill-sneak" name="attr_skill_sneak">                
+                <button type="roll" name="roll_sneak" value="@{whisper} &{template:skills} {{skillName=Sneak}}  {{roll=[[@{d20}+@{skill_sneak}-@{strain}]]}}"><span class="skill-descriptor">(Agi) </span>Sneak</button>
+                <input type="text" class="skill-total" name="attr_skill_sneak" value="0" readonly>
+                <input type="number" name="attr_skill_sneak_bonus" value="0" title="Points Spent">                
             </span>
             <span class="skill-box">
-                <button type="roll" name="roll_speech" value="&{template:skills} {{skillName=Speech}}  {{roll=[[@{d20}+@{skill_speech}-@{strain}]]}}"><span class="skill-descriptor">(Charisma) </span>Speech</button>
-                <input type="number" id="skill-speech" name="attr_skill_speech">                
+                <button type="roll" name="roll_speech" value="@{whisper} &{template:skills} {{skillName=Speech}}  {{roll=[[@{d20}+@{skill_speech}-@{strain}]]}}"><span class="skill-descriptor">(Cha) </span>Speech</button>
+                <input type="text" class="skill-total" name="attr_skill_speech" value="0" readonly>
+                <input type="number" name="attr_skill_speech_bonus" value="0" title="Points Spent">                
             </span>
             <span class="skill-box">
-                <button type="roll" name="roll_survival" value="&{template:skills} {{skillName=Survival}}  {{roll=[[@{d20}+@{skill_survival}-@{strain}]]}}"><span class="skill-descriptor">(Endurance) </span>Survival</button>
-                <input type="number" id="skill-survival" name="attr_skill_survival">                
+                <button type="roll" name="roll_survival" value="@{whisper} &{template:skills} {{skillName=Survival}}  {{roll=[[@{d20}+@{skill_survival}-@{strain}]]}}"><span class="skill-descriptor">(End) </span>Survival</button>
+                <input type="text" class="skill-total" name="attr_skill_survival" value="0" readonly>
+                <input type="number" name="attr_skill_survival_bonus" value="0" title="Points Spent">  
             </span>
             <span class="skill-box">
-                <button type="roll" name="roll_unarmed" value="&{template:skills} {{skillName=Unarmed}}  {{roll=[[@{d20}+@{skill_unarmed}-@{strain}]]}}"><span class="skill-descriptor">(Strength) </span>Unarmed</button>
-                <input type="number" id="skill-unarmed" name="attr_skill_unarmed">
+                <button type="roll" name="roll_unarmed" value="@{whisper} &{template:skills} {{skillName=Unarmed}}  {{roll=[[@{d20}+@{skill_unarmed}-@{strain}]]}}"><span class="skill-descriptor">(Str) </span>Unarmed</button>
+                <input type="text" class="skill-total" name="attr_skill_unarmed" value="0" readonly>
+                <input type="number" name="attr_skill_unarmed_bonus" value="0" title="Points Spent">  
             </span>
         </div>
     </div>
@@ -686,6 +700,7 @@
 
 <!-- scripts -->
 <script type="text/worker">    
+    //SPECIAL stat modifier function
     const stats = ["strength", "perception", "endurance", "charisma", "intelligence", "agility", "luck"];
     stats.forEach(stat => {
         on(`change:${stat}`, () => {
@@ -702,6 +717,52 @@
             });
         });
     });
+
+    //Skills
+    const skillStatMap = {
+        barter: ["charisma"],
+        breach: ["perception", "intelligence"],
+        crafting: ["intelligence"],
+        energy_weapons: ["perception"],
+        explosives: ["perception"],
+        guns: ["agility"],
+        intimidation: ["strength", "charisma"],
+        medicine: ["perception", "intelligence"],
+        melee_weapons: ["strength"],
+        science: ["intelligence"],
+        sneak: ["agility"],
+        speech: ["charisma"],
+        survival: ["endurance"],
+        unarmed: ["strength"]
+    };
+
+    const statMods = ["strength_mod", "perception_mod", "endurance_mod", "charisma_mod", "intelligence_mod", "agility_mod", "luck_mod"];
+    const bonusAttrs = Object.keys(skillStatMap).map(skill => `skill_${skill}_bonus`);
+
+    const skillUpdateEvents = statMods.map(mod => `change:${mod}`).concat(bonusAttrs.map(bonus => `change:${bonus}`)).join(" ");
+
+    on(skillUpdateEvents, () => {
+        getAttrs([...statMods, ...bonusAttrs], (v) => {
+            let updates = {};
+
+            Object.keys(skillStatMap).forEach(skill => {
+                const governingStats = skillStatMap[skill];
+                const mods = governingStats.map(stat => parseInt(v[`${stat}_mod`]) || 0);
+                
+                const baseScore = Math.max(...mods);
+                const bonusScore = parseInt(v[`skill_${skill}_bonus`]) || 0;
+                
+                updates[`skill_${skill}`] = baseScore + bonusScore;
+            });
+
+            setAttrs(updates);
+        });
+    });
+
+
+
+
+
 
     const ailments = ["hunger", "thirst", "exhaustion", "fatigue", "rads", "hypothermia", "overheating"]
     ailments.forEach(ailment =>{
