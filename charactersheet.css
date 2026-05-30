@@ -524,6 +524,7 @@ span.decay-card{
 }
 /*----- Advantage Toggle -----*/
 .advantage-toggle-pane{
+    margin-bottom: 10px;
  
 }
 
@@ -679,6 +680,7 @@ textarea.monster-special.big-text {
 .attack-view-select{
     background-color: rgb(255 255 255 / 8%);
     color: rgb(255 255 255 / 87%);
+    width: 96px;
 }
 
 .monster-grid{
@@ -713,6 +715,10 @@ span.monster-stat-span{
     width: 20%;
     margin: 0px !important;
     padding: 0px !important;
+}
+
+.monster-stat-span input{
+    margin-right: 10px;
 }
 
 .monster-info-box{

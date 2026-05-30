@@ -38,12 +38,18 @@
                 <input class="adv-radio" id="disadvantage" type="radio" name="attr_d20" value="2d20kl1" />
                 <label class="advantage-toggle" for="disadvantage">Disadvantage</label>
         </div>
+        <div class="advantage-toggle-pane">
+                    <input class="whisper-radio" id="public" type="radio" name="attr_whisper" value="" checked/>
+                    <label class="whisper-toggle" for="public">Public</label>
+                    <input class="whisper-radio" id="gm" type="radio" name="attr_whisper" value="/w gm"/>
+                    <label class="whisper-toggle" for="gm">GM</label>
+                </div>
         <hr>
 
         <div class="character-skills">
             <h2>Skills</h2>
             <span class="skill-box">
-                <button type="roll" name="roll_barter" value="&{template:skills} {{skillName=Barter}}  {{roll=[[@{d20}+@{skill_barter}-@{strain}]]}}"><span class="skill-descriptor">(Charisma) </span>Barter</button>
+                <button type="roll" name="roll_barter" value="@{whisper} &{template:skills} {{skillName=Barter}}  {{roll=[[@{d20}+@{skill_barter}-@{strain}]]}}"><span class="skill-descriptor">(Charisma) </span>Barter</button>
                 <input type="number" id="skill-barter" name="attr_skill_barter">
             </span>
             <span class="skill-box">
@@ -107,43 +113,43 @@
                 <button class="stat-roll" type="roll" name="roll_strength" value="&{template:skills} {{skillName=Strength}}  {{roll=[[@{d20}+@{strength_mod}-@{strain}]]}}">S</button>
                 <div class="stat-descriptor">Str</div>
                 <input class="stat-num" type="number" id="strength-score" name="attr_strength">
-                <span class="ability-score-mod-box" name="attr_strength_mod">0</span>
+                <span class="ability-score-mod-box" name="attr_strength_mod"></span>
             </div>
             <div class="character-stat">
                 <button class="stat-roll" type="roll" name="roll_perception" value="&{template:skills} {{skillName=Perception}}  {{roll=[[@{d20}+@{perception_mod}-@{strain}]]}}">P</button>
                 <div class="stat-descriptor">Per</div>
                 <input class="stat-num" type="number" id="perception-score" name="attr_perception">
-                <span class="ability-score-mod-box" name="attr_perception_mod">0</span>
+                <span class="ability-score-mod-box" name="attr_perception_mod"></span>
             </div>
             <div class="character-stat">
                 <button class="stat-roll" type="roll" name="roll_endurance" value="&{template:skills} {{skillName=Endurance}}  {{roll=[[@{d20}+@{endurance_mod}-@{strain}]]}}">E</button>
                 <div class="stat-descriptor">End</div>
                 <input class="stat-num" type="number" id="endurance-score" name="attr_endurance">
-                <span class="ability-score-mod-box" name="attr_endurance_mod">0</span>
+                <span class="ability-score-mod-box" name="attr_endurance_mod"></span>
             </div>
             <div class="character-stat">
                 <button class="stat-roll" type="roll" name="roll_charisma" value="&{template:skills} {{skillName=Charisma}}  {{roll=[[@{d20}+@{charisma_mod}-@{strain}]]}}">C</button>
                 <div class="stat-descriptor">Cha</div>
                 <input class="stat-num" type="number" id="charisma-score" name="attr_charisma">
-                <span class="ability-score-mod-box" name="attr_charisma_mod">0</span>
+                <span class="ability-score-mod-box" name="attr_charisma_mod"></span>
             </div>
             <div class="character-stat">
                 <button class="stat-roll" type="roll" name="roll_intelligence" value="&{template:skills} {{skillName=Intelligence}}  {{roll=[[@{d20}+@{intelligence_mod}-@{strain}]]}}">I</button>
                 <div class="stat-descriptor">Int</div>
                 <input class="stat-num" type="number" id="intelligence-score" name="attr_intelligence">
-                <span class="ability-score-mod-box" name="attr_intelligence_mod">0</span>
+                <span class="ability-score-mod-box" name="attr_intelligence_mod"></span>
             </div>
             <div class="character-stat">
                 <button class="stat-roll" type="roll" name="roll_agility" value="&{template:skills} {{skillName=Agility}}  {{roll=[[@{d20}+@{agility_mod}-@{strain}]]}}">A</button>
                 <div class="stat-descriptor">Agi</div>
                 <input class="stat-num" type="number" id="agility-score" name="attr_agility">
-                <span class="ability-score-mod-box" name="attr_agility_mod">0</span>
+                <span class="ability-score-mod-box" name="attr_agility_mod"></span>
             </div>
             <div class="character-stat">
                 <button class="stat-roll" type="roll" name="roll_luck" value="&{template:skills} {{skillName=Luck}}  {{roll=[[@{d20}+@{luck_mod}]]}}">L</button>
                 <div class="stat-descriptor">Lck</div>
                 <input class="stat-num" type="number" id="luck-score" name="attr_luck">
-                <span class="ability-score-mod-box" name="attr_luck_mod">0</span>
+                <span class="ability-score-mod-box" name="attr_luck_mod"></span>
             </div>
         </span>
         <hr>
@@ -470,76 +476,76 @@
                     <input type="text" id="character-type" name="attr_character_type">
                 </div>
                 <div class="advantage-toggle-pane">
-                    <input class="adv-radio" id="advantage" type="radio" name="attr_d20" value="2d20kh1" />
-                    <label class="advantage-toggle" for="advantage">Advantage</label>
-                    <input class="adv-radio" id="normal" type="radio" name="attr_d20" value="1d20" checked />
-                    <label class="advantage-toggle" for="normal">Normal</label>
-                    <input class="adv-radio" id="disadvantage" type="radio" name="attr_d20" value="2d20kl1" />
-                    <label class="advantage-toggle" for="disadvantage">Disadvantage</label>
+                    <input class="adv-radio" id="advantage2" type="radio" name="attr_md20" value="2d20kh1" />
+                    <label class="advantage-toggle" for="advantage2">Advantage</label>
+                    <input class="adv-radio" id="normal2" type="radio" name="attr_md20" value="1d20" />
+                    <label class="advantage-toggle" for="normal2">Normal</label>
+                    <input class="adv-radio" id="disadvantage2" type="radio" name="attr_md20" value="2d20kl1" />
+                    <label class="advantage-toggle" for="disadvantage2">Disadvantage</label>
+            </div>
+                <div class="advantage-toggle-pane">
+                    <input class="whisper-radio" id="mpublic" type="radio" name="attr_mwhisper" value="" checked/>
+                    <label class="whisper-toggle" for="mpublic">Public</label>
+                    <input class="whisper-radio" id="mgm" type="radio" name="attr_mwhisper" value="/w gm"/>
+                    <label class="whisper-toggle" for="mgm">GM</label>
                 </div>
-                <hr>
-                <span class="special-scores">
-                    <div class="character-stat">
-                        <button class="stat-roll" type="roll" name="roll_strength" value="/w gm &{template:skills} {{skillName=Strength}}  {{roll=[[@{d20}+@{strength_mod}-@{strain}]]}}">S</button>
-                        <input class="stat-num" type="number" id="strength-score" name="attr_strength">
-                        <span class="ability-score-mod-box" name="attr_strength_mod">0</span>
-                    </div>
-                    <div class="character-stat">
-                        <button class="stat-roll" type="roll" name="roll_perception" value="w gm &{template:skills} {{skillName=Perception}}  {{roll=[[@{d20}+@{perception_mod}-@{strain}]]}}">P</button>
-                        <input class="stat-num" type="number" id="perception-score" name="attr_perception">
-                        <span class="ability-score-mod-box" name="attr_perception_mod">0</span>
-                    </div>
-                    <div class="character-stat">
-                        <button class="stat-roll" type="roll" name="roll_endurance" value="w gm &{template:skills} {{skillName=Endurance}}  {{roll=[[@{d20}+@{endurance_mod}-@{strain}]]}}">E</button>
-                
-                        <input class="stat-num" type="number" id="endurance-score" name="attr_endurance">
-                        <span class="ability-score-mod-box" name="attr_endurance_mod">0</span>
-                    </div>
-                    <div class="character-stat">
-                        <button class="stat-roll" type="roll" name="roll_charisma" value="w gm &{template:skills} {{skillName=Charisma}}  {{roll=[[@{d20}+@{charisma_mod}-@{strain}]]}}">C</button>
-                        <input class="stat-num" type="number" id="charisma-score" name="attr_charisma">
-                        <span class="ability-score-mod-box" name="attr_charisma_mod">0</span>
-                    </div>
-                    <div class="character-stat">
-                        <button class="stat-roll" type="roll" name="roll_intelligence" value="w gm &{template:skills} {{skillName=Intelligence}}  {{roll=[[@{d20}+@{intelligence_mod}-@{strain}]]}}">I</button>
-                        <input class="stat-num" type="number" id="intelligence-score" name="attr_intelligence">
-                        <span class="ability-score-mod-box" name="attr_intelligence_mod">0</span>
-                    </div>
-                    <div class="character-stat">
-                        <button class="stat-roll" type="roll" name="roll_agility" value="w gm &{template:skills} {{skillName=Agility}}  {{roll=[[@{d20}+@{agility_mod}-@{strain}]]}}">A</button>
-                        <input class="stat-num" type="number" id="agility-score" name="attr_agility">
-                        <span class="ability-score-mod-box" name="attr_agility_mod">0</span>
-                    </div>
-                    <div class="character-stat">
-                        <button class="stat-roll" type="roll" name="roll_luck" value="w gm &{template:skills} {{skillName=Luck}}  {{roll=[[@{d20}+@{luck_mod}]]}}">L</button>
-                        <input class="stat-num" type="number" id="luck-score" name="attr_luck">
-                        <span class="ability-score-mod-box" name="attr_luck_mod">0</span>
-                    </div>
-                </span>
                 <hr>
                 <span class="monster-stat-span">
                     <label for="ac-score">AC</label>
                     <input class="body-stat" type="number" id="ac-score" name="attr_ac">
-                </span>
-                <span class="monster-stat-span">
                     <label for="dt-score">DT</label>
                     <input class="body-stat" type="number" id="dt-score" name="attr_dt">
                 </span>
                 <span class="monster-stat-span">
                     <label for="stamina-score">SP</label>
                     <input class="body-stat" type="number" id="stamina-score" name="attr_stamina">
-                </span>
-                <span class="monster-stat-span">
                     <label for="max-stamina-score">Max SP</label>
                     <input class="body-stat" type="number" id="max-stamina-score" name="attr_stamina_max">
                 </span>
                 <span class="monster-stat-span">
                     <label for="hp-score">HP</label>
                     <input class="body-stat" type="number" id="hp-score" name="attr_hp">
-                </span>
-                <span class="monster-stat-span">
                     <label for="maxhp-score">Max HP</label>
                     <input class="body-stat" type="number" id="maxhp-score" name="attr_hp_max">
+                </span>
+                <hr>
+                <span class="special-scores">
+                    <div class="character-stat">
+                        <button class="stat-roll" type="roll" name="roll_strength" value="@{mwhisper} &{template:skills} {{skillName=Strength}}  {{roll=[[@{md20}+@{strength_mod}-@{strain}]]}}">S</button>
+                        <input class="stat-num" type="number" id="strength-score" name="attr_strength">
+                        <span class="ability-score-mod-box" name="attr_strength_mod"></span>
+                    </div>
+                    <div class="character-stat">
+                        <button class="stat-roll" type="roll" name="roll_perception" value="@{mwhisper} &{template:skills} {{skillName=Perception}}  {{roll=[[@{md20}+@{perception_mod}-@{strain}]]}}">P</button>
+                        <input class="stat-num" type="number" id="perception-score" name="attr_perception">
+                        <span class="ability-score-mod-box" name="attr_perception_mod"></span>
+                    </div>
+                    <div class="character-stat">
+                        <button class="stat-roll" type="roll" name="roll_endurance" value="@{mwhisper} &{template:skills} {{skillName=Endurance}}  {{roll=[[@{md20}+@{endurance_mod}-@{strain}]]}}">E</button>
+                
+                        <input class="stat-num" type="number" id="endurance-score" name="attr_endurance">
+                        <span class="ability-score-mod-box" name="attr_endurance_mod"></span>
+                    </div>
+                    <div class="character-stat">
+                        <button class="stat-roll" type="roll" name="roll_charisma" value="@{mwhisper} &{template:skills} {{skillName=Charisma}}  {{roll=[[@{md20}+@{charisma_mod}-@{strain}]]}}">C</button>
+                        <input class="stat-num" type="number" id="charisma-score" name="attr_charisma">
+                        <span class="ability-score-mod-box" name="attr_charisma_mod"></span>
+                    </div>
+                    <div class="character-stat">
+                        <button class="stat-roll" type="roll" name="roll_intelligence" value="@{mwhisper} &{template:skills} {{skillName=Intelligence}}  {{roll=[[@{md20}+@{intelligence_mod}-@{strain}]]}}">I</button>
+                        <input class="stat-num" type="number" id="intelligence-score" name="attr_intelligence">
+                        <span class="ability-score-mod-box" name="attr_intelligence_mod"></span>
+                    </div>
+                    <div class="character-stat">
+                        <button class="stat-roll" type="roll" name="roll_agility" value="@{mwhisper} &{template:skills} {{skillName=Agility}}  {{roll=[[@{md20}+@{agility_mod}-@{strain}]]}}">A</button>
+                        <input class="stat-num" type="number" id="agility-score" name="attr_agility">
+                        <span class="ability-score-mod-box" name="attr_agility_mod"></span>
+                    </div>
+                    <div class="character-stat">
+                        <button class="stat-roll" type="roll" name="roll_luck" value="@{mwhisper} &{template:skills} {{skillName=Luck}}  {{roll=[[@{md20}+@{luck_mod}]]}}">L</button>
+                        <input class="stat-num" type="number" id="luck-score" name="attr_luck">
+                        <span class="ability-score-mod-box" name="attr_luck_mod"></span>
+                    </div>
                 </span>
                 <hr>
                 <textarea name="attr_monsterinfo" placeholder="Enter monster info here..." class="monster-info-box"></textarea>
@@ -555,18 +561,16 @@
                     <div class="weapon-card">
                         <div class="attack-mode-toggle">
                             <select name="attr_attack_view" class="attack-view-select">
-                                <option value="detailed" selected>Detailed Stats</option>
-                                <option value="simplified">Simplified</option>
+                                <option value="detailed" selected>Expanded</option>
+                                <option value="simplified">Simple</option>
                             </select>
                         </div>
-                        <hr>
-
                         <input type="hidden" name="attr_attack_view" class="toggle-control" value="detailed">
 
                         <div class="attack-view-simplified">
                             <div class="weapon-card-row">
                                 <input class="weapon" spellcheck="false" type="text" name="attr_weaponname" placeholder="Name">
-                                <button type="roll" name="roll_weapon_simple" value="/w gm &{template:paste} {{perkname=@{weaponname}}} {{perkdetails=@{monster_special}}}">Paste</button>
+                                <button type="roll" name="roll_weapon_simple" value="@{mwhisper} &{template:paste} {{perkname=@{weaponname}}} {{perkdetails=@{monster_special}}}">Paste</button>
                             </div>
                             <div class="weapon-card-row">
                                 <textarea name="attr_monster_special" class="monster-special big-text" placeholder="Enter details here..."></textarea>
@@ -576,7 +580,7 @@
                         <div class="attack-view-detailed">
                             <div class="weapon-card-row">
                                 <input class="weapon" spellcheck="false" type="text" name="attr_weaponname" placeholder="Weapon">
-                                <button type="roll" name="roll_weapon" value="/w gm &{template:weapon} {{weaponName=@{weaponname}}}  {{roll=[[@{d20}+@{weapon_attack}]]}} {{damage=[[@{weapon_damage}]]}} {{type=@{weapon_damage_type}}}">Roll</button>
+                                <button type="roll" name="roll_weapon" value="@{mwhisper} &{template:weapon} {{weaponName=@{weaponname}}}  {{roll=[[@{md20}+@{weapon_attack}]]}} {{damage=[[@{weapon_damage}]]}} {{type=@{weapon_damage_type}}}">Roll</button>
                             </div>
                             <div class="weapon-card-row">
                                 <span class="weapon-stats">
